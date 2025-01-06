@@ -1,0 +1,56 @@
+<?php
+session_start();
+require_once '../connection/connection.php'; // Include the database connection file
+
+// Check if the user is not logged in or not an admin
+if (!isset($_SESSION['user_id']) || $_SESSION['isAdmin'] != 2) {
+    header("Location: login.php"); // Redirect to login page
+    exit; // Prevent further execution of the script
+}
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize and validate input data
+    $productId = isset($_POST['productId']) ? intval($_POST['productId']) : 0;
+    $productName = isset($_POST['productName']) ? mysqli_real_escape_string($conn, $_POST['productName']) : '';
+    $storeName = isset($_POST['storeName']) ? mysqli_real_escape_string($conn, $_POST['storeName']) : '';
+    $ownerName = isset($_POST['ownerName']) ? mysqli_real_escape_string($conn, $_POST['ownerName']) : '';
+    $email = isset($_POST['email']) ? mysqli_real_escape_string($conn, $_POST['email']) : '';
+
+    // Validate the input (you can add more validation here)
+    if (empty($productName) || empty($storeName) || empty($ownerName) || empty($email)) {
+        echo "All fields are required.";
+        exit;
+    }
+
+    // SQL query to update the product details
+    $sql = "UPDATE products p
+            INNER JOIN stores s ON p.store_id = s.store_id
+            INNER JOIN users u ON s.user_id = u.id
+            SET p.name = ?, s.store_name = ?, u.first_name = ?, u.last_name = ?, u.email = ?
+            WHERE p.product_id = ?";
+
+    // Prepare the statement
+    if ($stmt = $conn->prepare($sql)) {
+        // Split the owner name into first and last names
+        list($firstName, $lastName) = explode(' ', $ownerName, 2);
+
+        // Bind the parameters
+        $stmt->bind_param("sssssi", $productName, $storeName, $firstName, $lastName, $email, $productId);
+
+        // Execute the statement
+        if ($stmt->execute()) {
+            // Redirect to the product list page or show a success message
+            header("Location: admin_product.php?success=1"); // Redirect to the product page with a success flag
+            exit;
+        } else {
+            echo "Error updating record: " . $stmt->error;
+        }
+
+        // Close the statement
+        $stmt->close();
+    } else {
+        echo "Database query failed: " . $conn->error;
+    }
+}
+?>

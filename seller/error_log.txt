@@ -1,0 +1,1164 @@
+[09-Dec-2024 04:06:41 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'orders.room_number' in 'field list' in C:\xampp\htdocs\presto\seller\seller_order.php:134
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(134): mysqli->prepare('SELECT orders.*...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 134
+[09-Dec-2024 04:06:48 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'orders.room_number' in 'field list' in C:\xampp\htdocs\presto\seller\seller_order.php:134
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(134): mysqli->prepare('SELECT orders.*...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 134
+[09-Dec-2024 04:11:12 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'orders.room_number' in 'field list' in C:\xampp\htdocs\presto\seller\seller_order.php:134
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(134): mysqli->prepare('SELECT orders.*...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 134
+[09-Dec-2024 04:14:14 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'orders.room_number' in 'field list' in C:\xampp\htdocs\presto\seller\seller_order.php:134
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(134): mysqli->prepare('SELECT orders.*...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 134
+[09-Dec-2024 04:24:33 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'orders.room_number' in 'field list' in C:\xampp\htdocs\presto\seller\seller_order.php:134
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(134): mysqli->prepare('SELECT orders.*...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 134
+[09-Dec-2024 05:39:52 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 377
+[09-Dec-2024 05:39:52 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 382
+[09-Dec-2024 05:39:52 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 383
+[09-Dec-2024 05:39:52 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 384
+[09-Dec-2024 05:39:52 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 385
+[09-Dec-2024 05:39:52 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 386
+[09-Dec-2024 05:39:55 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 377
+[09-Dec-2024 05:39:55 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 382
+[09-Dec-2024 05:39:55 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 383
+[09-Dec-2024 05:39:55 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 384
+[09-Dec-2024 05:39:55 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 385
+[09-Dec-2024 05:39:55 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 386
+[09-Dec-2024 05:40:01 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 377
+[09-Dec-2024 05:40:01 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 382
+[09-Dec-2024 05:40:01 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 383
+[09-Dec-2024 05:40:01 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 384
+[09-Dec-2024 05:40:01 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 385
+[09-Dec-2024 05:40:01 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 386
+[09-Dec-2024 05:40:05 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 377
+[09-Dec-2024 05:40:05 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 382
+[09-Dec-2024 05:40:05 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 383
+[09-Dec-2024 05:40:05 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 384
+[09-Dec-2024 05:40:05 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 385
+[09-Dec-2024 05:40:05 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 386
+[09-Dec-2024 05:40:12 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 377
+[09-Dec-2024 05:40:12 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 382
+[09-Dec-2024 05:40:12 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 383
+[09-Dec-2024 05:40:12 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 384
+[09-Dec-2024 05:40:12 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 385
+[09-Dec-2024 05:40:12 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 386
+[09-Dec-2024 05:41:03 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 05:41:03 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 380
+[09-Dec-2024 05:41:03 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 381
+[09-Dec-2024 05:41:03 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 382
+[09-Dec-2024 05:41:03 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 383
+[09-Dec-2024 05:41:03 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 384
+[09-Dec-2024 05:42:54 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 05:42:54 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 380
+[09-Dec-2024 05:42:54 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 381
+[09-Dec-2024 05:42:54 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 382
+[09-Dec-2024 05:42:54 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 383
+[09-Dec-2024 05:42:54 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 384
+[09-Dec-2024 05:43:00 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 05:43:00 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 380
+[09-Dec-2024 05:43:00 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 381
+[09-Dec-2024 05:43:00 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 382
+[09-Dec-2024 05:43:00 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 383
+[09-Dec-2024 05:43:00 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 384
+[09-Dec-2024 05:43:04 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 05:43:04 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 380
+[09-Dec-2024 05:43:04 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 381
+[09-Dec-2024 05:43:04 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 382
+[09-Dec-2024 05:43:04 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 383
+[09-Dec-2024 05:43:04 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 384
+[09-Dec-2024 05:49:32 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\presto\seller\seller_order.php:115
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(115): mysqli_stmt->bind_param('ii', 0, 7)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 115
+[09-Dec-2024 05:51:17 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:17 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:17 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:17 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:17 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 05:51:17 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 05:51:17 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 361
+[09-Dec-2024 05:51:17 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 362
+[09-Dec-2024 05:51:17 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 363
+[09-Dec-2024 05:51:17 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 364
+[09-Dec-2024 05:51:23 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:23 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:23 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:23 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:24 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:24 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:24 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:24 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:31 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:31 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:31 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:31 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:37 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:37 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:37 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:37 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:39 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:39 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:39 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:39 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:41 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:41 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:41 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:41 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:41 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:41 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:41 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:41 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:46 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:46 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:46 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:46 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:47 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:47 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:47 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:47 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:48 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:48 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:48 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:48 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:50 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:50 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:50 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:50 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:52 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:52 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:52 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:52 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:59 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:59 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:51:59 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:51:59 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:52:02 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:52:02 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:52:02 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:52:02 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:52:19 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:52:19 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:52:19 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:52:19 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:52:19 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 05:52:19 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 05:52:19 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 361
+[09-Dec-2024 05:52:19 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 362
+[09-Dec-2024 05:52:19 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 363
+[09-Dec-2024 05:52:19 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 364
+[09-Dec-2024 05:52:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:52:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:52:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:52:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:52:26 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 05:52:26 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 05:52:26 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 361
+[09-Dec-2024 05:52:26 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 362
+[09-Dec-2024 05:52:26 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 363
+[09-Dec-2024 05:52:26 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 364
+[09-Dec-2024 05:52:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:52:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:52:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:52:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:52:30 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 05:52:30 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 05:52:30 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 361
+[09-Dec-2024 05:52:30 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 362
+[09-Dec-2024 05:52:30 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 363
+[09-Dec-2024 05:52:30 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 364
+[09-Dec-2024 05:53:06 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:53:06 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:53:06 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:53:06 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:53:08 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:53:08 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:53:08 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:53:08 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:53:12 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:53:12 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:53:12 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:53:12 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:53:12 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 05:53:12 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 361
+[09-Dec-2024 05:53:12 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 362
+[09-Dec-2024 05:53:12 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 363
+[09-Dec-2024 05:53:12 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 364
+[09-Dec-2024 05:53:16 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:53:16 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 322
+[09-Dec-2024 05:53:16 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:53:16 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 05:53:16 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 05:53:16 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 05:53:16 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 361
+[09-Dec-2024 05:53:16 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 362
+[09-Dec-2024 05:53:16 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 363
+[09-Dec-2024 05:53:16 Europe/Berlin] PHP Warning:  Undefined variable $orderStatus in C:\xampp\htdocs\presto\seller\seller_order.php on line 364
+[09-Dec-2024 05:55:45 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:55:45 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:55:45 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:55:45 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:55:45 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:55:45 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:55:45 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:55:45 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:55:45 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:55:45 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:55:46 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:55:46 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:55:46 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:55:46 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:55:46 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:55:47 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:55:47 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:55:47 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:55:47 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:55:47 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:56:00 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:56:00 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:56:00 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:56:00 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:56:00 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:56:16 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:56:16 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:56:16 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:56:16 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:56:16 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:56:21 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:56:21 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:56:21 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:56:21 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:56:21 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:57:47 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:47 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:47 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:47 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:47 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:57:48 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:48 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:48 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:48 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:48 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:50 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:57:52 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:52 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:52 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:52 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:52 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:57:52 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:52 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:52 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:52 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:52 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:57:53 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:53 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:53 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:53 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:53 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 05:57:53 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:53 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 324
+[09-Dec-2024 05:57:53 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:53 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 05:57:53 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 357
+[09-Dec-2024 06:01:20 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:20 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:20 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:20 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:20 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 362
+[09-Dec-2024 06:01:23 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:23 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:23 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:23 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:23 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 362
+[09-Dec-2024 06:01:31 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:31 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:31 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:31 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:41 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:41 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:41 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:41 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:52 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:52 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:52 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:52 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:54 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:54 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:54 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:54 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:59 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:59 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:59 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:59 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:59 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:59 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:01:59 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:01:59 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:01 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:02 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:02 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:02 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:02 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:02 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:02 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:02 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:02 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:03 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:03 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:03 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:03 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:04 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:04 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:04 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:04 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:04 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:04 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:04 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:04 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:05 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:05 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:05 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:05 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:05 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:05 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:05 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:05 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:07 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:07 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:07 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:07 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:09 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:09 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:09 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:09 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:09 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:09 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:09 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:09 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:10 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:10 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:10 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:10 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:11 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:11 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:11 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:11 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:11 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:11 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:11 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:11 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:12 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:12 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:12 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:12 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:33 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:33 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:02:33 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:33 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:02:33 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 362
+[09-Dec-2024 06:03:04 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:03:04 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:03:04 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:03:04 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:16:00 Europe/Berlin] PHP Warning:  Undefined variable $countQuery in C:\xampp\htdocs\presto\seller\seller_order.php on line 86
+[09-Dec-2024 06:16:00 Europe/Berlin] PHP Deprecated:  mysqli::prepare(): Passing null to parameter #1 ($query) of type string is deprecated in C:\xampp\htdocs\presto\seller\seller_order.php on line 86
+[09-Dec-2024 06:16:00 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Query was empty in C:\xampp\htdocs\presto\seller\seller_order.php:86
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(86): mysqli->prepare('')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 86
+[09-Dec-2024 06:18:08 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\presto\seller\seller_order.php:93
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(93): mysqli_stmt->bind_param('ii', 32, 32)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 93
+[09-Dec-2024 06:20:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:20:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:20:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:20:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:20:43 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:12 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:12 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:12 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:12 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:27 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:27 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:27 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:27 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:29 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:29 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:29 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:29 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:29 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:29 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:29 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:29 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:51 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:51 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:51 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:51 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:57 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:21:58 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:38 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:39 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:40 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:45 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 360
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 367
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 394
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "course" in C:\xampp\htdocs\presto\seller\seller_order.php on line 443
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "section" in C:\xampp\htdocs\presto\seller\seller_order.php on line 444
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\presto\seller\seller_order.php on line 449
+[09-Dec-2024 06:22:46 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto\seller\seller_order.php on line 450
+[09-Dec-2024 06:23:15 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:23:15 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:23:15 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:23:15 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:23:15 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 400
+[09-Dec-2024 06:23:24 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:23:24 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:23:24 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:23:24 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:23:24 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 400
+[09-Dec-2024 06:23:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:23:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:23:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:23:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:23:30 Europe/Berlin] PHP Warning:  Undefined variable $orderDate in C:\xampp\htdocs\presto\seller\seller_order.php on line 400
+[09-Dec-2024 06:23:55 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:23:55 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:23:55 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:23:55 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:24 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:24 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:24 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:24 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:26 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:26 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:27 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:30 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:31 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:31 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:31 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:31 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:32 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:32 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:32 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:32 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:37 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:37 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:37 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:37 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:37 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:37 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 366
+[09-Dec-2024 06:27:37 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:27:37 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:35:22 Europe/Berlin] PHP Warning:  Undefined variable $types in C:\xampp\htdocs\presto\seller\seller_order.php on line 120
+[09-Dec-2024 06:35:22 Europe/Berlin] PHP Deprecated:  mysqli_stmt::bind_param(): Passing null to parameter #1 ($types) of type string is deprecated in C:\xampp\htdocs\presto\seller\seller_order.php on line 120
+[09-Dec-2024 06:35:22 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: mysqli_stmt::bind_param(): Argument #1 ($types) cannot be empty in C:\xampp\htdocs\presto\seller\seller_order.php:120
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(120): mysqli_stmt->bind_param('', 32, 32)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 120
+[09-Dec-2024 06:35:23 Europe/Berlin] PHP Warning:  Undefined variable $types in C:\xampp\htdocs\presto\seller\seller_order.php on line 120
+[09-Dec-2024 06:35:23 Europe/Berlin] PHP Deprecated:  mysqli_stmt::bind_param(): Passing null to parameter #1 ($types) of type string is deprecated in C:\xampp\htdocs\presto\seller\seller_order.php on line 120
+[09-Dec-2024 06:35:23 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: mysqli_stmt::bind_param(): Argument #1 ($types) cannot be empty in C:\xampp\htdocs\presto\seller\seller_order.php:120
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(120): mysqli_stmt->bind_param('', 32, 32)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 120
+[09-Dec-2024 06:35:23 Europe/Berlin] PHP Warning:  Undefined variable $types in C:\xampp\htdocs\presto\seller\seller_order.php on line 120
+[09-Dec-2024 06:35:23 Europe/Berlin] PHP Deprecated:  mysqli_stmt::bind_param(): Passing null to parameter #1 ($types) of type string is deprecated in C:\xampp\htdocs\presto\seller\seller_order.php on line 120
+[09-Dec-2024 06:35:23 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: mysqli_stmt::bind_param(): Argument #1 ($types) cannot be empty in C:\xampp\htdocs\presto\seller\seller_order.php:120
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(120): mysqli_stmt->bind_param('', 32, 32)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 120
+[09-Dec-2024 06:36:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 368
+[09-Dec-2024 06:36:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 368
+[09-Dec-2024 06:36:36 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 06:36:36 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 368
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 368
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 368
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 368
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 368
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 368
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 06:36:57 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 375
+[09-Dec-2024 06:39:18 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:39:18 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:39:18 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 380
+[09-Dec-2024 06:39:18 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 380
+[09-Dec-2024 06:39:32 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:39:32 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 373
+[09-Dec-2024 06:39:32 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 380
+[09-Dec-2024 06:39:32 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 380
+[09-Dec-2024 06:41:51 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 371
+[09-Dec-2024 06:41:51 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 371
+[09-Dec-2024 06:41:51 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 378
+[09-Dec-2024 06:41:51 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 378
+[09-Dec-2024 06:42:01 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\presto\seller\seller_order.php:124
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(124): mysqli_stmt->bind_param('iiii', 32, 32, 0, 7)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 124
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 348
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 348
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $resultOrders in C:\xampp\htdocs\presto\seller\seller_order.php on line 423
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 423
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 348
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 348
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $resultOrders in C:\xampp\htdocs\presto\seller\seller_order.php on line 423
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 423
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 348
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 348
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $resultOrders in C:\xampp\htdocs\presto\seller\seller_order.php on line 423
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 423
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 348
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 348
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Undefined variable $resultOrders in C:\xampp\htdocs\presto\seller\seller_order.php on line 423
+[09-Dec-2024 06:45:40 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 423
+[09-Dec-2024 06:45:41 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 348
+[09-Dec-2024 06:45:41 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 348
+[09-Dec-2024 06:45:41 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 06:45:41 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 355
+[09-Dec-2024 06:45:41 Europe/Berlin] PHP Warning:  Undefined variable $resultOrders in C:\xampp\htdocs\presto\seller\seller_order.php on line 423
+[09-Dec-2024 06:45:41 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 423
+[09-Dec-2024 06:45:55 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\presto\seller\seller_order.php:111
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(111): mysqli_stmt->bind_param('iiii', 32, 32, 0, 7)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 111
+[09-Dec-2024 06:45:55 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\presto\seller\seller_order.php:111
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(111): mysqli_stmt->bind_param('iiii', 32, 32, 0, 7)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 111
+[09-Dec-2024 06:45:55 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\presto\seller\seller_order.php:111
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(111): mysqli_stmt->bind_param('iiii', 32, 32, 0, 7)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 111
+[09-Dec-2024 06:45:55 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\presto\seller\seller_order.php:111
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(111): mysqli_stmt->bind_param('iiii', 32, 32, 0, 7)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 111
+[09-Dec-2024 06:46:01 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\presto\seller\seller_order.php:124
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(124): mysqli_stmt->bind_param('iiii', 32, 32, 0, 7)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 124
+[09-Dec-2024 06:46:02 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\presto\seller\seller_order.php:124
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(124): mysqli_stmt->bind_param('iiii', 32, 32, 0, 7)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 124
+[09-Dec-2024 06:46:02 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\presto\seller\seller_order.php:124
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(124): mysqli_stmt->bind_param('iiii', 32, 32, 0, 7)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 124
+[09-Dec-2024 06:46:02 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\presto\seller\seller_order.php:124
+Stack trace:
+#0 C:\xampp\htdocs\presto\seller\seller_order.php(124): mysqli_stmt->bind_param('iiii', 32, 32, 0, 7)
+#1 {main}
+  thrown in C:\xampp\htdocs\presto\seller\seller_order.php on line 124
+[09-Dec-2024 06:46:06 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 374
+[09-Dec-2024 06:46:06 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 374
+[09-Dec-2024 06:46:06 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 381
+[09-Dec-2024 06:46:06 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 381
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:48 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:49 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:54 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:54 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:54 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:54 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:57 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:57 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:57 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:57 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:58 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:58 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:48:58 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:48:58 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:49:00 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:49:00 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:49:00 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:49:00 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:49:02 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:49:02 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:49:02 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:49:02 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:49:06 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:49:06 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 331
+[09-Dec-2024 06:49:06 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:49:06 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 338
+[09-Dec-2024 06:49:45 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 06:49:45 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 329
+[09-Dec-2024 06:49:45 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 336
+[09-Dec-2024 06:49:45 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 336
+[09-Dec-2024 06:49:58 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:49:58 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:49:58 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:49:58 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:50:06 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:50:06 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 06:50:06 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 06:50:06 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 07:05:28 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 07:05:28 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 328
+[09-Dec-2024 07:05:28 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 07:05:28 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto\seller\seller_order.php on line 335
+[09-Dec-2024 08:51:25 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'orders.student_id' in 'field list' in C:\xampp\htdocs\presto-replace\seller\seller_order.php:84
+Stack trace:
+#0 C:\xampp\htdocs\presto-replace\seller\seller_order.php(84): mysqli->prepare('SELECT orders.*...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 84
+[10-Dec-2024 16:22:01 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'orders.student_id' in 'field list' in C:\xampp\htdocs\presto-replace\seller\seller_order.php:84
+Stack trace:
+#0 C:\xampp\htdocs\presto-replace\seller\seller_order.php(84): mysqli->prepare('SELECT orders.*...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 84
+[10-Dec-2024 16:25:54 Europe/Berlin] PHP Warning:  Undefined array key "student_id" in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 418
+[10-Dec-2024 16:25:54 Europe/Berlin] PHP Warning:  Undefined array key "student_id" in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 418
+[10-Dec-2024 16:25:54 Europe/Berlin] PHP Warning:  Undefined array key "student_id" in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 418
+[10-Dec-2024 16:25:54 Europe/Berlin] PHP Warning:  Undefined array key "student_id" in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 418
+[10-Dec-2024 16:25:54 Europe/Berlin] PHP Warning:  Undefined array key "student_id" in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 418
+[10-Dec-2024 16:25:54 Europe/Berlin] PHP Warning:  Undefined array key "student_id" in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 418
+[10-Dec-2024 16:25:54 Europe/Berlin] PHP Warning:  Undefined array key "student_id" in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 418
+[10-Dec-2024 16:43:41 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 340
+[10-Dec-2024 16:43:41 Europe/Berlin] PHP Warning:  Undefined variable $notifications in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 347
+[10-Dec-2024 16:43:41 Europe/Berlin] PHP Warning:  Attempt to read property "num_rows" on null in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 347
+[11-Dec-2024 04:19:51 Europe/Berlin] PHP Warning:  Undefined variable $buyer_email in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 161
+Mailer Error: Invalid address:  (to): [11-Dec-2024 04:22:52 Europe/Berlin] PHP Warning:  Undefined variable $buyer_email in C:\xampp\htdocs\presto-replace\seller\seller_order.php on line 161
+Mailer Error: Invalid address:  (to): Mailer Error: SMTP Error: Could not authenticate.

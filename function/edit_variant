@@ -1,0 +1,20 @@
+<?php
+require_once '../connection/connection.php';
+
+if (isset($_POST['variant_id']) && isset($_POST['size']) && isset($_POST['spicy_level'])) {
+    $variant_id = $_POST['variant_id'];
+    $size = $_POST['size'];
+    $spicy_level = $_POST['spicy_level'];
+    $stock_quantity = isset($_POST['stock_quantity']) ? $_POST['stock_quantity'] : 0;
+
+    // Update variant in the database
+    $query = $conn->prepare("UPDATE product_variants SET size = ?, spicy_level = ?, stock_quantity = ? WHERE variant_id = ?");
+    $query->bind_param("ssii", $size, $spicy_level, $stock_quantity, $variant_id);
+
+    if ($query->execute()) {
+        echo "Variant updated successfully.";
+    } else {
+        echo "Error: Could not update variant.";
+    }
+}
+?>

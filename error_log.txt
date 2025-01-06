@@ -1,0 +1,18 @@
+[11-Dec-2024 04:32:34 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'prestogrubs.deliveries' doesn't exist in C:\xampp\htdocs\presto-replace\delivery_form.php:63
+Stack trace:
+#0 C:\xampp\htdocs\presto-replace\delivery_form.php(63): mysqli->prepare('SELECT COUNT(*)...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto-replace\delivery_form.php on line 63
+[11-Dec-2024 04:35:11 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'orders.store_id' in 'on clause' in C:\xampp\htdocs\presto-replace\delivery_form.php:73
+Stack trace:
+#0 C:\xampp\htdocs\presto-replace\delivery_form.php(73): mysqli->prepare('SELECT orders.*...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto-replace\delivery_form.php on line 73
+[11-Dec-2024 04:35:51 Europe/Berlin] PHP Warning:  Undefined variable $student_number in C:\xampp\htdocs\presto-replace\delivery_form.php on line 273
+[11-Dec-2024 04:35:51 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\presto-replace\delivery_form.php on line 273
+[11-Dec-2024 04:35:51 Europe/Berlin] PHP Warning:  Undefined variable $receiver_name in C:\xampp\htdocs\presto-replace\delivery_form.php on line 276
+[11-Dec-2024 04:35:51 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\presto-replace\delivery_form.php on line 276
+[11-Dec-2024 04:37:20 Europe/Berlin] PHP Warning:  Undefined variable $student_number in C:\xampp\htdocs\presto-replace\delivery_form.php on line 273
+[11-Dec-2024 04:37:20 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\presto-replace\delivery_form.php on line 273
+[11-Dec-2024 04:37:20 Europe/Berlin] PHP Warning:  Undefined variable $receiver_name in C:\xampp\htdocs\presto-replace\delivery_form.php on line 276
+[11-Dec-2024 04:37:20 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\presto-replace\delivery_form.php on line 276

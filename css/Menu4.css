@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #202020;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+a h1{
+    color: darkorange;
+}    
+main {
+    padding: 20px;
+}
+.menu-category {
+    margin-bottom: 20px;
+}
+.menu-category h2 {
+    color: darkorange;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+}
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.item-name {
+    font-weight: bold;
+}
+.item-price {
+    color: #666;
+}
+footer {
+    background-color: #202020;
+    color: darkorange;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    padding: 10x;
+    font-weight: bold;
+}
+
+body {
+    background-color: rgb(250, 246, 238);
+}
+
+nav {
+    background-color: rgb(250, 246, 238);
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out menu and user info */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Added padding */
+    width: 100%; /* Ensure the nav occupies full width */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex; /* Display the menu items in a row */
+    flex-grow: 1; /* Allow the ul to grow and fill available space */
+    justify-content: center; /* Center the menu items */
+    background: #007bff;
+}
+
+nav ul a {
+    display: inline-block;
+    margin: 0 20px; /* Adjusted margin for better spacing */
+    padding: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: 0.2s ease-in;
+    border-radius: 160px;
+}
+
+nav ul a:hover {
+    background: #007bff;
+    color: #131358;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    color: #050505;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s ease;
+    outline-color: #EBEBFB;
+    outline: auto;
+    outline-width: 10px;
+}
+
+.item img:hover {
+    transform: scale(1.04);
+}
+
+.item h4 {
+    padding: 12px;
+    font-size: 20px;
+    text-align: center;
+    color: #050505;
+}
+
+.item button {
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background: darkorange;
+    color: black;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s all;
+}
+
+.item button:hover {
+    transform: scale(1.08);
+}
+
+footer {
+    color: #007bff;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 1px 4px 1px;
+}
+
+.footerNav {
+    margin: 10px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: #000000;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: rgb(250, 246, 238);
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: rgb(0, 0, 0);
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .socialIcons a {
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #EBEBFB;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-weight: bold;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #007bff;
+}
+
+/* Show the dropdown content when the dropdown button is hovered over */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #007bff;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Space from the menu */
+    color: #EBEBFB;
+}
+
+.profile-pic {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensures the image covers the area properly */
+    margin-right: 10px; /* Space between picture and username */
+}

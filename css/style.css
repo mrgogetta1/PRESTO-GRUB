@@ -1,0 +1,260 @@
+/* PRODUCT TITLE & STORE TITLE */
+button, .dropdown-content a, .item button, h3:not(.product-title):not(.store-title) {
+    padding: 10px 15px; /* Set consistent padding for all buttons */
+    font-size: 19px;    /* Adjust font size to maintain consistency */
+    margin: 5px 0;      /* Standardize margins */
+    border-radius: 6px; /* Keep rounded corners */
+    color: black;       /* Set font color to black */
+    background-color: transparent; /* Set background color to white */
+    border: 2px solid white; /* Border color for buttons */
+    cursor: pointer;    /* Ensure pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a slight shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* PRODUCT DES & STORE DES */
+.product-description, .store-description {
+    font-family: 'Verdana', sans-serif;  /* Use a clean and easy-to-read font */
+    font-size: 20px;                     /* Increase font size for better readability */
+    line-height: 1.6;                    /* Increase line height for better readability */
+    text-align: justify;                 /* Align the text for a neat, professional look */
+    margin: 10px 15px;                   /* Add some margin around the description */
+    padding: 0 15px;                     /* Add padding to avoid text touching edges */
+    
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 3vw; /* Use relative units for responsiveness */
+    margin-top: 20px;
+    margin-bottom: 2px;
+    color: #fff;
+    font-family: Arial, sans-serif; /* Ensure uniform font */
+    font-weight: bold; /* Make title bold */
+}
+
+/* Adjust font size for smaller devices */
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 4vw; /* Slightly smaller font size for mobile */
+    }
+}
+
+/* Adjust font size for very small devices */
+@media screen and (max-width: 480px) {
+    .section-title {
+        font-size: 5vw; /* Even smaller font size for very small screens */
+    }
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 100%;
+    max-width: 230px;
+    font-family: Arial, sans-serif; /* Ensure uniform font */
+}
+
+.grid-item img {
+    width: 230px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.grid-item {
+    font-size: 18px;
+    margin: 2px 20px;
+    color: black;
+    font-family: Arial, sans-serif; /* Ensure uniform font */
+}
+
+.grid-item p {
+    font-size: 15px;
+    color: black;
+    padding: 0px 0px 3px;
+    text-align: justify;
+    font-family: Arial, sans-serif; /* Ensure uniform font */
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-results {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Overall container style for elegance */
+.product-dashboard {
+    height: 40px;
+    width: 250px;
+    background-color: darkgreen;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 170px;
+    margin: 16px auto;
+    font-family: Arial, sans-serif; /* Ensure uniform font */
+}
+
+/* Apply white text color to all p tags inside .product-dashboard */
+.product-dashboard p {
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Ensure uniform font */
+}
+
+/* Total Sold label */
+.total-sold-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+    margin-bottom: -5px;
+}
+
+/* Total Sold number */
+.total-sold-count {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.1px;
+    text-align: center;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.total-sold-count:hover {
+    color: red;
+    transform: scale(1.02);
+}
+
+/* Adjustable color using CSS variables for the red to orange flame effect */
+:root {
+    --flame-border-color-2: #ff4500;
+    --flame-border-color-1: #ff6347;
+    --flame-border-color-3: #ff7f50;
+}
+
+.product-dashboard {
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+@keyframes flaming-border {
+    0% {
+        border: 5px solid var(--flame-border-color-1);
+        box-shadow: 0 0 5px var(--flame-border-color-1), 0 0 10px var(--flame-border-color-1), 0 0 15px var(--flame-border-color-1), 0 0 20px var(--flame-border-color-2), 0 0 25px var(--flame-border-color-2), 0 0 30px var(--flame-border-color-2);
+        transform: scale(1);
+    }
+    50% {
+        border: 5px solid var(--flame-border-color-2);
+        box-shadow: 0 0 10px var(--flame-border-color-2), 0 0 20px var(--flame-border-color-2), 0 0 30px var(--flame-border-color-3), 0 0 35px var(--flame-border-color-3);
+        transform: scale(1.05);
+    }
+    100% {
+        border: 5px solid var(--flame-border-color-3);
+        box-shadow: 0 0 15px var(--flame-border-color-3), 0 0 25px var(--flame-border-color-3), 0 0 35px var(--flame-border-color-2), 0 0 40px var(--flame-border-color-2);
+        transform: scale(1);
+    }
+}
+
+.product-dashboard {
+    animation: flaming-border 1.5s infinite ease-in-out;
+}
+
+.total-sold-label, .total-sold-count {
+    margin: 0;
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 37px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    color: #fff;
+    font-family: Arial, sans-serif; /* Ensure uniform font */
+}
+
+/* Style for View Product Button */
+.view-product-btn {
+    background-color: #ae0909;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 2px;
+    display: inline-block;
+    font-family: Arial, sans-serif; /* Ensure uniform font */
+}
+
+/* Hover effect */
+.view-product-btn:hover {
+    background-color: #c70707;
+    transform: translateY(-2px);
+}
+
+/* Active state */
+.view-product-btn:active {
+    background-color: #ae0909;
+    transform: translateY(0);
+}
+
+/* Focus state (optional) */
+.view-product-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5);
+}
+
+/* Style for paragraph text */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+/* Optional: Style for paragraph text when inside a container or specific class */
+p.custom-paragraph {
+    font-size: 18px;
+    color: #555;
+    font-style: italic;
+    margin-top: 20px;
+    text-align: justify;
+}

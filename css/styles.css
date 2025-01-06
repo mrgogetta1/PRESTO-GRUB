@@ -1,0 +1,1463 @@
+/* General Reset and Styling */
+/* Ensure no overflow in case of screen resize */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* General body and html styles */
+html,
+body {
+  height: 100%;
+}
+h2,
+h3 {
+  font-weight: 600;
+  color: black;
+  margin-top: 60px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 200px;
+  background: linear-gradient(45deg, #2e8b57, #042d86);
+  color: white;
+  padding: 20px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0px; /* Initially hidden */
+  z-index: 10;
+  transition: left 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: 400px) {
+    width: 160px;
+  }
+
+  @media (max-width: 500px) {
+    width: 180px;
+  }
+}
+
+/* Sidebar when active */
+.sidebar.active {
+  left: 0; /* Slide in from the left */
+}
+
+/* Sidebar Logo */
+.sidebar-logo {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: -20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar Menu Items */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: -40px;
+  position: relative;
+  top: -150px;
+
+  @media (max-width: 400px) {
+    margin-top: 200px;
+  }
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar-menu li i {
+  font-size: 1.4rem;
+}
+
+/* Hover and Active State */
+.sidebar-menu li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.sidebar-menu li:active {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(10px);
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  position: relative;
+  display: flex;
+  font-size: 1.2rem;
+  top: -40px;
+  margin-top: 10px;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-footer img {
+  height: 50px;
+  border-radius: 40px;
+  margin-top: 10px;
+}
+
+/* Smooth Toggle Button */
+.toggle-btn {
+  position: relative;
+  top: -5px;
+  margin-top: 25px;
+  margin-left: 50px;
+  z-index: 20;
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
+  display: none;
+  color: white;
+  background-color: #1b5e20;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.toggle-btn:hover {
+  background-color: #2e8b57;
+  transform: rotate(90deg);
+}
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 250px; /* No shift when sidebar is toggled */
+  padding: 20px;
+  margin-top: 20px;
+
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+
+  transition: margin-left 0.4s ease; /* Smooth transition */
+}
+
+/* When Sidebar is hidden */
+.main-content.fullscreen {
+  margin-left: 0; /* Fullscreen mode when sidebar is hidden */
+}
+
+/* When Sidebar is visible */
+.main-content.shifted {
+  margin-left: 350px; /* Matches sidebar width */
+
+  @media (max-width: 400px) {
+    margin-left: 200px;
+  }
+
+  @media (max-width: 500px) {
+    margin-left: 220px;
+  }
+}
+
+/* Ensure smooth transition for main content */
+.main-content {
+  transition: margin-left 0.4s ease;
+}
+
+.main-border {
+  background-color: white;
+  width: 100%;
+}
+
+/* Notification Section */
+.notification {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.notification-icon {
+  position: relative; /* Ensure the count is positioned relative to the icon */
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.notification-icon:hover {
+  color: #2e8b57;
+  transform: scale(1.1);
+}
+
+/* Notification Count */
+.notification-count {
+  position: absolute;
+  top: -5px; /* Adjusted for better placement inside the icon */
+  right: -5px; /* Adjusted for better placement inside the icon */
+  background-color: #ff4d4d;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 6px; /* Adjust padding to make it fit inside the icon */
+  font-size: 12px; /* Adjust font size to fit within the count bubble */
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Ensure it stays on top of the icon */
+}
+
+/* Notification Dropdown */
+.notification-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 100;
+  border-radius: 8px;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.notification-dropdown.show {
+  display: block;
+  opacity: 1;
+}
+
+.notification-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 350px;
+}
+
+.notification-item {
+  padding: 12px;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.notification-item:hover {
+  background-color: #f1f1f1;
+  transform: translateX(8px);
+}
+
+.notification-item.unread {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+
+.notification-item .notification-message {
+  font-size: 14px;
+  line-height: 1.4;
+  color: black;
+}
+
+.notification-item .notification-time {
+  font-size: 12px;
+  color: #888;
+  text-align: right;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .notification-dropdown {
+    width: 90%;
+    top: 50px;
+    left: 5%;
+  }
+}
+
+.btn-login {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-login:hover {
+  background-color: #0056b3;
+}
+
+/* Other styles for carousel, items, etc... */
+
+/* Main Content Section */
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+
+  @media (max-width: 400px) {
+    margin-top: -20px;
+  }
+}
+
+.header input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.header-center {
+  position: relative;
+  left: 450px;
+}
+
+.header button {
+  padding: 10px;
+  background: linear-gradient(45deg, #2e8b57, #042d86);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header button:hover {
+  background-color: #216c40;
+}
+
+/* Cart and Profile Section */
+.cart-profile-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: 400px) {
+    position: relative;
+    right: 50px;
+  }
+}
+
+.cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Cart Icon */
+.cart-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: relative; /* Important to position the count inside the icon */
+}
+
+/* Notification Count (for cart) */
+.cart-count {
+  position: absolute;
+  top: -5px; /* Adjust the positioning to be inside the cart icon */
+  right: -5px; /* Adjust the positioning to be inside the cart icon */
+  background-color: #ff4d4d;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* Profile Section */
+.profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.profile-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+.profile-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+.profile-dropdown-icon {
+  font-size: 1rem;
+  color: black;
+}
+.profile:hover .profile-dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 20;
+}
+
+.profile:hover .dropdown {
+  display: flex; /* Show dropdown on hover */
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown a i {
+  font-size: 1rem;
+}
+
+.dropdown a:hover {
+  background: linear-gradient(45deg, #2e8b57, #042d86);
+  color: #fff;
+}
+
+/* Carousel Section */
+.carousel {
+  position: relative;
+  overflow: hidden; /* Add this to hide the overflow */
+  width: 60%;
+  height: 358px;
+  margin-left: 5px;
+  margin-bottom: 80px;
+  border-radius: 8px;
+}
+
+/* Carousel Container */
+.carousel-container {
+  display: flex;
+  align-items: center; /* Vertically align carousel and side image */
+  gap: 10px; /* Add space between carousel and image */
+  justify-content: center; /* Center the content horizontally */
+  position: relative; /* Make sure buttons are positioned correctly */
+  padding: 20px; /* Add some padding around the carousel container */
+  box-sizing: border-box; /* Include padding in the element's total width */
+}
+/* Side Image */
+.carousel-side-image {
+  width: 62%; /* Adjust width relative to the carousel */
+  height: 358px; /* Match the carousel height */
+  display: flex;
+  padding: -20px 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: -82px;
+}
+
+.carousel-side-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px; /* Match the carousel's border radius */
+}
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth sliding */
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+/* Carousel Buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    45deg,
+    #2e8b57,
+    #042d86
+  ); /* Gradient background */
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+.carousel-button:hover {
+  background: linear-gradient(
+    45deg,
+    #1a6e3a,
+    #031f5d
+  ); /* Darker gradient on hover */
+}
+
+.carousel-button.left {
+  left: 15px; /* Adjust position for left button */
+}
+
+.carousel-button.right {
+  right: 15px; /* Adjust position for right button */
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: #1a73e8; /* Active indicator color */
+}
+
+.indicator:hover {
+  background-color: #555; /* Darken on hover */
+}
+
+.recommendations-container {
+  width: 100%;
+  margin-top: 20px;
+  background: linear-gradient(45deg, #2e8b57, #042d86);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recommendations-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -25px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.recommendations-header h2 {
+  font-size: 1.7em;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.navigation-buttons .nav-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navigation-buttons .nav-btn:hover {
+  background-color: #ffe680;
+}
+
+.recommendations-items {
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 0 15px;
+}
+
+.recommendation-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 30px;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.product-info {
+  text-align: center;
+}
+.product-name {
+  font-size: 1em;
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+}
+
+.product-price {
+  font-size: 0.9em;
+  color: #555;
+  margin: 5px 0 0;
+}
+
+/* Recommendations Section */
+.recommendations {
+  padding: 20px;
+  background: linear-gradient(45deg, #2e8b57, #042d86);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-align: center;
+}
+
+.recommendations-header h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Product Card */
+.product-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Total Sold Section */
+.total-sold {
+  background: linear-gradient(45deg, #2e8b57, #042d86);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px; /* Same padding as View Product button */
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  display: inline-block; /* Makes it behave like a button */
+  width: 100%; /* Same width as the button */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.total-sold span {
+  color: #ff5722;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Product Image */
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Product Details */
+.product-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  height: 50px; /* Fixed height for description */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+}
+
+/* View Product Button */
+.view-product-btn {
+  background: linear-gradient(45deg, #2e8b57, #042d86);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px; /* Same padding as Total Sold */
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block; /* Makes it behave like a button */
+  width: 100%; /* Same width as Total Sold */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.view-product-btn:hover {
+  background-color: #cc0000;
+}
+
+#see-more {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: #2e8b57;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#see-more:hover {
+  background-color: #216c40;
+}
+
+.menu-container {
+  width: 100%;
+  margin: 120px auto;
+  background: linear-gradient(45deg, #2e8b57, #042d86);
+  position: relative;
+  border-radius: 10px;
+}
+.menu-header {
+  display: flex;
+  margin-top: -60px;
+  margin-bottom: 20px;
+}
+
+.menu-header h2 {
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-left: -315px;
+  text-align: center;
+}
+
+.navigation-buttons .nav-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 5px 10px;
+  position: relative;
+  left: 760px;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navigation-buttons .nav-btn:hover {
+  background-color: #e3e3e3;
+}
+
+.menu-header {
+  position: relative;
+  left: 769px;
+  font-size: 1.2rem;
+}
+
+.menu-items {
+  display: flex;
+  gap: -15px;
+  position: relative;
+  left: 59px;
+  margin-bottom: 40px;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.menu-card {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  width: 105px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon {
+  font-size: 3em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.menu-card p {
+  font-size: 15px;
+  color: WHITE;
+  margin: 0;
+}
+
+/* Categories Section */
+.categories button {
+  padding: 10px 20px;
+  background-color: #2e8b57;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 50px;
+
+  position: relative;
+  left: 300px;
+
+  @media (max-width: 400px) {
+    margin: 12px 4px;
+  }
+}
+
+.categories button:hover {
+  background-color: #216c40;
+  transform: translateY(-2px);
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px; /* Add some space above */
+  margin-bottom: 50px; /* Ensure spacing below */
+}
+
+.pagination-btn {
+  background: linear-gradient(45deg, #05853c, #0438a7);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: background 0.3s;
+  display: inline-block; /* Ensures the button behaves as a block element */
+}
+
+.pagination-btn:disabled {
+  cursor: not-allowed;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #921818;
+}
+
+.page-info {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  display: inline-block; /* Ensures it aligns correctly with the buttons */
+  margin-top: 0; /* Prevents unwanted top margin */
+}
+
+.choose-order h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.order-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.order-card {
+  background: #fff; /* White background */
+  border-radius: 12px; /* Smooth rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Ensure content stays within bounds */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Evenly space elements */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px); /* Lift slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* Ensure image maintains aspect ratio */
+  border-bottom: 1px solid #ddd; /* Subtle divider line */
+}
+
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: 600; /* Bold font for name */
+  color: #333; /* Darker text color */
+  margin-bottom: 8px;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #555; /* Subtle text color */
+  line-height: 1.4; /* Readable spacing */
+  margin-bottom: 12px;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 700; /* Bold price */
+  color: #2a9d8f; /* Highlighted text color */
+  margin-bottom: 12px;
+}
+
+.order-now-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2a9d8f; /* Match price color */
+  border: 2px dashed #2a9d8f; /* Dashed border */
+  border-radius: 8px;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.order-now-btn:hover {
+  background-color: #2a9d8f; /* Fill on hover */
+  color: #fff; /* White text on hover */
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.star-rating span {
+  font-size: 1.3rem;
+  color: #ffc107;
+}
+
+/* Hide the sidebar and show the toggle button when screen width <= 400px */
+@media (max-width: 400px) {
+  .header-center {
+    display: none;
+  }
+
+  .profile {
+    left: 270px;
+  }
+
+  .menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    left: 30px;
+  }
+
+  .menu-card {
+    background-color: #e6f6f0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100px;
+    margin: 10px 0;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .order-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 25px;
+  }
+}
+/* Container for Product Cards */
+.order-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Product Card */
+.product-card {
+  width: 300px; /* Keep the width consistent with previous design */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Product Image */
+.product-image {
+  width: 100%;
+  height: 200px; /* Adjust height to the previous size */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Product Name */
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Product Description */
+.product-description {
+  color: black;
+  font-size: 14px;
+  margin: px 0;
+  height: 70px;
+}
+
+/* Product Price */
+.product-price {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* View Product Button */
+.view-product-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1d2671;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+/* Store Container */
+.store-container {
+  background: linear-gradient(45deg, #2e8b57, #042d86);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Store Header */
+.store-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Store Items Grid */
+.store-items {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+}
+
+/* Store Card */
+.store-card {
+  background-color: #fff; /* White background for the store card */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Store Card Hover Effect */
+.store-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+/* Store Name */
+.store-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* Store Location */
+.store-location {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* Store Description */
+.store-description {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* View Store Button */
+.view-store-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(45deg, #2e8b57, #042d86);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* View Store Button Hover */
+.view-store-btn:hover {
+  background-color: #005cb2; /* Darker blue on hover */
+}
+
+/* No Store Available */
+.store-items p {
+  text-align: center;
+  color: white;
+}
+/* Store Header */
+.store-header {
+  text-align: center; /* Center the header text */
+}
+
+.store-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits the text color from the parent element */
+}
+
+/* General Container Styling */
+.store-container {
+  width: 96.5%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.store-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.store-header h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Store Items Layout */
+.store-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.store-card {
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.store-card:hover {
+  transform: translateY(-5px);
+}
+
+.store-name {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+  margin: 15px;
+  text-align: center;
+}
+
+.store-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.store-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.store-location {
+  font-size: 0.9rem;
+  color: #000000;
+  margin: 10px 15px;
+}
+
+.store-description {
+  font-size: 0.9rem;
+  color: #000000;
+  margin: 10px 15px;
+}
+
+.view-store-btn {
+  display: block;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 15px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.view-store-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 1024px) {
+  .header-center {
+    position: relative;
+    left: 150px;
+  }
+
+  .sidebar-menu {
+    position: relative;
+    top: -50px !important;
+    margin-top: 100px;
+  }
+
+  .menu-header h2 {
+    position: relative;
+    right: 180px;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 960px) {
+  .header-center {
+    position: relative;
+    left: 100px !important;
+  }
+
+  .sidebar {
+    width: 180px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-center {
+    position: relative;
+    left: 30px !important;
+  }
+}
+
+@media (max-width: 835px) {
+  .notification-icon {
+    display: none !important;
+  }
+
+  .cart {
+    display: none !important;
+  }
+
+  .menu-header h2 {
+    position: relative;
+    text-align: center !important;
+    right: 350px;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    left: 20px;
+  }
+}
+
+@media (max-width: 645px) {
+  .header-center input {
+    width: 100px;
+    position: relative;
+    left: -10px;
+  }
+
+  .header-center button {
+    position: relative;
+    left: -10px;
+  }
+
+  .menu-header h2 {
+    position: relative;
+    text-align: center !important;
+    right: 390px;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-header h2 {
+    font-size: 1.3rem;
+    position: relative;
+    text-align: center !important;
+    right: 390px;
+  }
+}
+
+@media (max-width: 536px) {
+  .menu-header h2 {
+    font-size: 1.2rem;
+    position: relative;
+    text-align: center !important;
+    right: 420px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-center input {
+    width: 100px;
+    position: relative;
+    left: 30px;
+    margin-right: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  .login {
+    position: relative;
+    left: 350px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-menu li {
+    position: relative;
+    top: -160px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .login {
+    position: relative;
+    left: 150px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 365px) {
+  .login {
+    position: relative;
+    left: 270px !important;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,178 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('uploads/yup.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header, footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Remove hover effect in navbar */
+.navbar a:hover {
+    background-color: transparent; /* No background color change on hover */
+}
+/* Buttons */
+button, .dropdown-content a, .item button, h3 {
+    padding: 8px 12px;
+    font-size: 12px;
+    margin: 3px 0;
+    border-radius: 6px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Button Hover Effects */
+button:hover, .dropdown-content a:hover, .item button:hover, h3:hover {
+    background-color: rgba(46, 204, 113, 0.5);
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active, .dropdown-content a:active, .item button:active, h3:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Focus State for h3 */
+h3:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.7);
+}
+/* Main content area */
+main {
+    padding: 20px;
+}
+
+/* Filter Form */
+form {
+    margin: 20px 0;
+    text-align: center;
+}
+
+form label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+select, button {
+    padding: 8px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+select {
+    width: 200px;
+    max-width: 100%;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    select, button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Empty Table Row */
+td[colspan='8'] {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #888;
+}
+
+/* Hover Effect on Table Rows */
+table tr:hover {
+    background-color: #f4f4f4;
+}
+
+/* Footer Styling */
+footer {
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}

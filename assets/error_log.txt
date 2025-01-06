@@ -1,0 +1,5 @@
+[11-Dec-2024 04:21:33 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'dababyyyy1@gmail.com' for key 'email' in C:\xampp\htdocs\presto-replace\assets\register-form.php:35
+Stack trace:
+#0 C:\xampp\htdocs\presto-replace\assets\register-form.php(35): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\presto-replace\assets\register-form.php on line 35

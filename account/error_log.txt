@@ -1,0 +1,30 @@
+[06-Dec-2024 22:48:35 Europe/Berlin] Email could not be sent. Mailer Error: SMTP Error: Could not authenticate.
+[10-Dec-2024 15:52:27 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\presto-replace\account\register-form.php on line 15
+[10-Dec-2024 15:52:27 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\presto-replace\account\register-form.php on line 15
+[10-Dec-2024 15:52:27 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'username' in 'field list' in C:\xampp\htdocs\presto-replace\account\register-form.php:31
+Stack trace:
+#0 C:\xampp\htdocs\presto-replace\account\register-form.php(31): mysqli->prepare('INSERT INTO use...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto-replace\account\register-form.php on line 31
+[10-Dec-2024 16:01:49 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'prestogrubs.user_verifications' doesn't exist in C:\xampp\htdocs\presto-replace\account\register-form.php:46
+Stack trace:
+#0 C:\xampp\htdocs\presto-replace\account\register-form.php(46): mysqli->prepare('INSERT INTO use...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto-replace\account\register-form.php on line 46
+[10-Dec-2024 16:02:00 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'prestogrubs.user_verifications' doesn't exist in C:\xampp\htdocs\presto-replace\account\register-form.php:46
+Stack trace:
+#0 C:\xampp\htdocs\presto-replace\account\register-form.php(46): mysqli->prepare('INSERT INTO use...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto-replace\account\register-form.php on line 46
+[10-Dec-2024 16:07:01 Europe/Berlin] PHP Warning:  Undefined array key "contact_no" in C:\xampp\htdocs\presto-replace\account\register-form.php on line 20
+[10-Dec-2024 16:07:01 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\presto-replace\account\register-form.php on line 20
+[10-Dec-2024 16:07:01 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'prestogrubs.user_verifications' doesn't exist in C:\xampp\htdocs\presto-replace\account\register-form.php:46
+Stack trace:
+#0 C:\xampp\htdocs\presto-replace\account\register-form.php(46): mysqli->prepare('INSERT INTO use...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto-replace\account\register-form.php on line 46
+[10-Dec-2024 16:10:42 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'prestogrubs.user_verifications' doesn't exist in C:\xampp\htdocs\presto-replace\account\register-form.php:46
+Stack trace:
+#0 C:\xampp\htdocs\presto-replace\account\register-form.php(46): mysqli->prepare('INSERT INTO use...')
+#1 {main}
+  thrown in C:\xampp\htdocs\presto-replace\account\register-form.php on line 46
