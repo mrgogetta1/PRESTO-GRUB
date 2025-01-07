@@ -46,6 +46,7 @@ body {
     left: 10px;
   }
 }
+
 /* Form row styles */
 .form-row {
   display: flex;
@@ -177,4 +178,58 @@ h2 {
   outline: none;
   border-color: #45a049; /* Highlight border on focus */
   background-color: #e0f7e9; /* Slightly different background when focused */
+}
+@media (max-width:950px) {
+  .container{
+    flex-direction: column;
+  }
+  input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="file"] {
+  width: 150px; /* Ensure the input field takes the full width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+}
+
+@media (max-width:500px) {
+  .container{
+    flex-direction: column;
+  }
+  input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="file"] {
+  width: 100%; /* Ensure the input field takes the full width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+}
+
+@media (max-width:500px) {
+  .container{
+    flex-direction: column;
+    left: 0;
+  }
+  input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="file"] {
+  width: 100%; /* Ensure the input field takes the full width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
 }
