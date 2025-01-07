@@ -1,5 +1,7 @@
 <?php
 session_start();
+// Include TCPDF
+require_once '../vendor/autoload.php';
 require_once '../connection/connection.php';
 
 // Set the default timezone to Asia/Manila (UTC +8)
@@ -68,6 +70,67 @@ if (!$resultOrders) {
     echo "Error fetching completed orders: " . $conn->error;
     exit;
 }
+
+// Handle PDF generation
+if (isset($_POST['generate_pdf'])) {
+    // Create new PDF document
+    $pdf = new TCPDF();
+    $pdf->AddPage();
+
+    // Set font
+    $pdf->SetFont('Helvetica', 'B', 14);
+    $pdf->Cell(0, 10, 'Completed Orders Report - ' . $selectedDate, 0, 1, 'C');
+
+    // Set font for table content
+    $pdf->SetFont('Helvetica', '', 12);
+    
+     // Add Store Header
+     $pdf->Cell(0, 10, 'Store Name: Presto Grub', 0, 1, 'L'); // Change this to the actual store name
+    
+     // Add the Date and Time the report is generated
+     $pdf->Cell(0, 10, 'Report Generated: ' . date('Y-m-d H:i:s'), 0, 1, 'L');
+     
+     // Add a summary of the report
+     $pdf->Cell(0, 10, 'This report contains completed orders for ' . $selectedDate, 0, 1, 'L');
+     
+     // Add a horizontal line
+     $pdf->Ln(5);
+     $pdf->Line(10, $pdf->GetY(), 200, $pdf->GetY());
+ 
+     // Set font for table content
+     $pdf->SetFont('Helvetica', '', 12);
+     
+     // Add table header
+     $pdf->Ln(10);
+     $pdf->Cell(25, 10, 'Order ID', 1, 0, 'C');
+     $pdf->Cell(40, 10, 'User Name', 1, 0, 'C');
+     $pdf->Cell(30, 10, 'Course', 1, 0, 'C');
+     $pdf->Cell(20, 10, 'Section', 1, 0, 'C');
+     $pdf->Cell(35, 10, 'Order Date', 1, 0, 'C');
+     $pdf->Cell(50, 10, 'User Email', 1, 0, 'C');
+     $pdf->Cell(30, 10, 'Contact No', 1, 1, 'C');
+ 
+     // Loop through orders and add them to the table
+     while ($row = $resultOrders->fetch_assoc()) {
+         $pdf->Cell(25, 10, $row["order_id"], 1, 0, 'C');
+         $pdf->Cell(40, 10, $row["first_name"] . ' ' . $row["last_name"], 1, 0, 'C');
+         $pdf->Cell(30, 10, $row["course"], 1, 0, 'C');
+         $pdf->Cell(20, 10, $row["section"], 1, 0, 'C');
+         $pdf->Cell(35, 10, $row["order_date"], 1, 0, 'C');
+         $pdf->Cell(50, 10, $row["user_email"], 1, 0, 'C');
+         $pdf->Cell(30, 10, $row["contact_no"], 1, 1, 'C');
+     }
+ 
+     // Add total number of orders at the end of the report
+     $totalOrders = $resultOrders->num_rows;
+     $pdf->Ln(10);
+     $pdf->Cell(0, 10, 'Total Completed Orders: ' . $totalOrders, 0, 1, 'C');
+ 
+     // Output the PDF as a downloadable file
+     $pdf->Output('completed_orders_report_' . $selectedDate . '.pdf', 'D'); // 'D' will force the PDF to download
+ 
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -172,6 +235,10 @@ if (!$resultOrders) {
             <button type="submit" class="btn btn-primary mt-2">Show Orders</button>
         </form>
 
+        <form method="POST" action="">
+            <button type="submit" name="generate_pdf" class="btn btn-success mt-2">Generate PDF Report</button>
+        </form>
+
         <table class="table mt-3">
             <thead>
                 <tr>
@@ -198,7 +265,6 @@ if (!$resultOrders) {
                     echo "<td>" . $row["user_email"] . "</td>";
                     echo "<td>" . $row["contact_no"] . "</td>";
                     echo "<td>" . $row["status"] . "</td>";
-                    
                     echo "</tr>";
                 }
             } else {
