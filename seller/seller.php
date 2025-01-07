@@ -68,6 +68,8 @@ $todayIncome = fetchIncome($conn, $user_id, "AND DATE(CONVERT_TZ(o.order_date, '
 $weeklyIncome = fetchIncome($conn, $user_id, "AND DATE(CONVERT_TZ(o.order_date, '+00:00', '+08:00')) >= DATE_SUB(CURDATE(), INTERVAL 7 DAY)");
 $monthlyIncome = fetchIncome($conn, $user_id, "AND DATE(CONVERT_TZ(o.order_date, '+00:00', '+08:00')) >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)");
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -77,6 +79,11 @@ $monthlyIncome = fetchIncome($conn, $user_id, "AND DATE(CONVERT_TZ(o.order_date,
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presto Grub Seller Panel</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">\
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -105,6 +112,9 @@ $monthlyIncome = fetchIncome($conn, $user_id, "AND DATE(CONVERT_TZ(o.order_date,
             padding: 20px;
             margin-bottom: 20px;
         }
+        .card-title i {
+    font-size: 2.2rem; /* Adjust icon size to make it larger */
+}
     </style>
 </head>
 <body>
@@ -125,100 +135,231 @@ $monthlyIncome = fetchIncome($conn, $user_id, "AND DATE(CONVERT_TZ(o.order_date,
         <a href="seller_msg.php" onclick="showChat()">Chat</a>
     </div>
     <div class="content" id="dashboard">
-        <h2 class="text-center">Dashboard</h2>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card text-white bg-primary mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Stores</h5>
-                        <p class="card-text"><?php echo $storeCount; ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-success mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Products</h5>
-                        <p class="card-text"><?php echo $productCount; ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-warning mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Sold Items</h5>
-                        <p class="card-text"><?php echo $totalOrders; ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-info mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Income</h5>
-                        <p class="card-text">₱<?php echo number_format($totalIncome, 2); ?></p>
-                    </div>
+    <h2 class="text-center">Dashboard</h2>
+    <div class="row">
+        <!-- Total Stores -->
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between">
+                        Total Stores
+                        <i class="fas fa-store"></i>
+                    </h5>
+                    <p class="card-text"><?php echo $storeCount; ?></p>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card text-white bg-danger mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Today's Income</h5>
-                        <p class="card-text">₱<?php echo number_format($todayIncome, 2); ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-secondary mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Weekly Income</h5>
-                        <p class="card-text">₱<?php echo number_format($weeklyIncome, 2); ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-dark mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Monthly Income</h5>
-                        <p class="card-text">₱<?php echo number_format($monthlyIncome, 2); ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-light text-dark mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Today's Orders</h5>
-                        <p class="card-text"><?php echo $todayOrders; ?></p>
-                    </div>
+
+        <!-- Total Products -->
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between">
+                        Total Products
+                        <i class="fas fa-box"></i>
+                    </h5>
+                    <p class="card-text"><?php echo $productCount; ?></p>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Weekly Orders</h5>
-                        <p class="card-text"><?php echo $weeklyOrders; ?></p>
-                    </div>
+
+        <!-- Total Sold Items -->
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between">
+                        Total Sold Items
+                        <i class="fas fa-cart-arrow-down"></i>
+                    </h5>
+                    <p class="card-text"><?php echo $totalOrders; ?></p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Monthly Orders</h5>
-                        <p class="card-text"><?php echo $monthlyOrders; ?></p>
+        </div>
+
+        <!-- Total Income -->
+        <div class="col-md-3">
+            <div class="card text-white bg-info mb-3">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between">
+                        Total Income
+                        <i class="fas fa-money-bill-wave"></i>
+                    </h5>
+                    <p class="card-text">₱<?php echo number_format($totalIncome, 2); ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Today's Income -->
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between">
+                        Today's Income
+                        <i class="fas fa-calendar-day"></i>
+                    </h5>
+                    <p class="card-text">₱<?php echo number_format($todayIncome, 2); ?></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weekly Income -->
+        <div class="col-md-3">
+            <div class="card text-white bg-secondary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between">
+                        Weekly Income
+                        <i class="fas fa-calendar-week"></i>
+                    </h5>
+                    <p class="card-text">₱<?php echo number_format($weeklyIncome, 2); ?></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monthly Income -->
+        <div class="col-md-3">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between">
+                        Monthly Income
+                        <i class="fas fa-calendar-alt"></i>
+                    </h5>
+                    <p class="card-text">₱<?php echo number_format($monthlyIncome, 2); ?></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Today's Orders -->
+        <div class="col-md-3">
+            <div class="card text-white bg-light text-dark mb-3">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between">
+                        Today's Orders
+                        <i class="fas fa-clipboard-list"></i>
+                    </h5>
+                    <p class="card-text"><?php echo $todayOrders; ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Bar Chart for Total Stores, Products, Orders, and Income -->
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Business Overview</h5>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+<!-- Meter Chart for Today's Income -->
+<div class="col-md-6">
+    <div class="card mb-3">
+        <div class="card-body text-center">
+            <h5 class="card-title">Today's Income Meter</h5>
+            <div style="position: relative; display: inline-block;">
+                <canvas id="meterChart" style="max-width: 100%; max-height: 240px;"></canvas>
+                <!-- Arrow and Label -->
+                <div style="position: absolute; top: 20%; left: 55%; transform: translate(-50%, -50%); text-align: center;">
+                    <span id="achievedLabel" style="font-weight: bold; font-size: 1.2rem; color: #FFA726;"></span>
+                    <div style="margin-top: -25px; margin-right: -130px;">
+                        <i class="fas fa-arrow-down" style="color: #FFA726;"></i>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+</div>
+
+    </div>
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-gauge"></script>
 <script>
+
+window.onload = function () {
+    // Bar Chart for Total Stores, Products, Orders, and Income
+    const ctxBar = document.getElementById('barChart').getContext('2d');
+    const barChart = new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+            labels: ['Total Stores', 'Total Products', 'Total Sold Items', 'Total Income'],
+            datasets: [{
+                label: 'Business Overview',
+                data: [
+                    <?php echo $storeCount; ?>, 
+                    <?php echo $productCount; ?>, 
+                    <?php echo $totalOrders; ?>, 
+                    <?php echo $totalIncome; ?>
+                ],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.6)', 
+                    'rgba(75, 192, 192, 0.6)', 
+                    'rgba(255, 159, 64, 0.6)', 
+                    'rgba(153, 102, 255, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 1)', 
+                    'rgba(75, 192, 192, 1)', 
+                    'rgba(255, 159, 64, 1)', 
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const ctxMeter = document.getElementById('meterChart').getContext('2d');
+const todayIncome = <?php echo $todayIncome; ?>;
+const meterChart = new Chart(ctxMeter, {
+    type: 'doughnut',
+    data: {
+        labels: ['Achieved', 'Remaining'],
+        datasets: [{
+            data: [todayIncome, Math.max(100 - todayIncome, 0)],
+            backgroundColor: ['#FFA726', '#E0E0E0'], // Orange and light grey
+            borderWidth: 0
+        }]
+    },
+    options: {
+        responsive: true,
+        circumference: 180, // Semi-circle
+        rotation: 270, // Start from the top
+        plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false }
+        }
+    }
+});
+
+// Add the achieved value dynamically as a label
+document.getElementById('achievedLabel').textContent = `₱${todayIncome.toFixed(2)}`;
+
+
+};
+
+
     function showDashboard() {
         document.getElementById("dashboard").style.display = "block";
     }
     // Add other functions for displaying different sections here
+
+    
 </script>
 
 </body>
