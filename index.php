@@ -261,7 +261,7 @@ if (!empty($search)) {
                     </div>
                     <button class="search-btn"><i class="fa fa-search"></i></button>
                 </div>
-                
+
             </div>
 
             <div class="cart-profile-container" id="cart-profile-container">
@@ -495,243 +495,243 @@ if (!empty($search)) {
             <br>
             <!-- Footer -->
             <?php include 'footer.php'; ?>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const searchBtn = document.querySelector('.search-btn');
+                const searchForm = document.querySelector('.search-form');
+                const cartprofile = document.querySelector('#cart-profile-container');
 
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const searchBtn = document.querySelector('.search-btn');
-                    const searchForm = document.querySelector('.search-form');
-                    const cartprofile = document.querySelector('#cart-profile-container');
-
-                    searchBtn.addEventListener('click', function() {
-                        searchForm.classList.toggle('active');
-                        cartprofile.classList.toggle('hide');
-                        this.classList.toggle('active');
-                        this.innerHTML = this.classList.contains('active') ? '<i class="fa fa-times"></i>' : '<i class="fa fa-search"></i>';
-                    });
+                searchBtn.addEventListener('click', function() {
+                    searchForm.classList.toggle('active');
+                    cartprofile.classList.toggle('hide');
+                    this.classList.toggle('active');
+                    this.innerHTML = this.classList.contains('active') ? '<i class="fa fa-times"></i>' : '<i class="fa fa-search"></i>';
                 });
+            });
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    const toggleBtn = document.getElementById('toggle-btn');
-                    const sidebar = document.getElementById('sidebar');
-                    const mainContent = document.querySelector('.main-content');
+            document.addEventListener('DOMContentLoaded', function() {
+                const toggleBtn = document.getElementById('toggle-btn');
+                const sidebar = document.getElementById('sidebar');
+                const mainContent = document.querySelector('.main-content');
 
-                    toggleBtn.addEventListener('click', function() {
-                        sidebar.classList.toggle('active');
-                        mainContent.classList.toggle('shifted');
-                    });
+                toggleBtn.addEventListener('click', function() {
+                    sidebar.classList.toggle('active');
+                    mainContent.classList.toggle('shifted');
                 });
+            });
 
 
-                // Toggle the notification dropdown visibility when the notification icon is clicked
-                document.querySelector('.notification-icon').addEventListener('click', function() {
+            // Toggle the notification dropdown visibility when the notification icon is clicked
+            document.querySelector('.notification-icon').addEventListener('click', function() {
+                const dropdown = document.querySelector('.notification-dropdown');
+                dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+
+                // Close the notification dropdown if you click outside of it
+                document.addEventListener('click', function(event) {
                     const dropdown = document.querySelector('.notification-dropdown');
-                    dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+                    const notificationIcon = document.querySelector('.notification-icon');
 
-                    // Close the notification dropdown if you click outside of it
-                    document.addEventListener('click', function(event) {
-                        const dropdown = document.querySelector('.notification-dropdown');
-                        const notificationIcon = document.querySelector('.notification-icon');
+                    // Check if the click is outside the dropdown and the icon
+                    if (!dropdown.contains(event.target) && !notificationIcon.contains(event.target)) {
+                        dropdown.style.display = 'none';
+                    }
+                });
 
-                        // Check if the click is outside the dropdown and the icon
-                        if (!dropdown.contains(event.target) && !notificationIcon.contains(event.target)) {
-                            dropdown.style.display = 'none';
+                // Mark notifications as read
+                fetch('seller/mark_notifications_read.php')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Update notification item styles (remove "unread" class)
+                            document.querySelectorAll('.notification-item').forEach(item => {
+                                item.classList.remove('unread');
+                            });
+
+                            // Optionally, update notification count
+                            document.querySelector('.notification-count').style.display = 'none'; // Hide count after read
                         }
                     });
-
-                    // Mark notifications as read
-                    fetch('seller/mark_notifications_read.php')
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.success) {
-                                // Update notification item styles (remove "unread" class)
-                                document.querySelectorAll('.notification-item').forEach(item => {
-                                    item.classList.remove('unread');
-                                });
-
-                                // Optionally, update notification count
-                                document.querySelector('.notification-count').style.display = 'none'; // Hide count after read
-                            }
-                        });
-                });
+            });
 
 
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    const searchQuery = new URLSearchParams(window.location.search).get('search')?.toLowerCase();
-
-                    if (searchQuery) {
-                        // Get all product items in the order items section
-                        const orderItems = document.querySelectorAll('.order-card');
-
-                        // Loop through each item and check if it matches the search query
-                        orderItems.forEach(item => {
-                            const productName = item.getAttribute('data-name').toLowerCase();
-
-                            // If the product name doesn't match the search query, hide it
-                            if (!productName.includes(searchQuery)) {
-                                item.style.display = 'none';
-                            } else {
-                                item.style.display = 'block';
-                            }
-                        });
-                    }
-                });
-
-                const urlParams = new URLSearchParams(window.location.search);
-                const selectedCategory = urlParams.get('category') || 'all';
-
-                document.querySelectorAll('.menu-card').forEach(card => {
-                    const categoryText = card.querySelector('p').textContent.trim().toLowerCase();
-                    if (categoryText === selectedCategory.toLowerCase()) {
-                        card.classList.add('active');
-                    } else {
-                        card.classList.remove('active');
-                    }
-                });
-
-
-
-                const searchQuery = new URLSearchParams(window.location.search).get('search');
-
-                const allProducts = document.getElementById("allProducts");
-                const allStores = document.getElementById("allStores");
-                const searchProducts = document.getElementById("searchProducts");
-                const searchStores = document.getElementById("searchStores");
+            document.addEventListener('DOMContentLoaded', function() {
+                const searchQuery = new URLSearchParams(window.location.search).get('search')?.toLowerCase();
 
                 if (searchQuery) {
-                    allProducts.style.display = 'none';
-                    allStores.style.display = 'none';
+                    // Get all product items in the order items section
+                    const orderItems = document.querySelectorAll('.order-card');
+
+                    // Loop through each item and check if it matches the search query
+                    orderItems.forEach(item => {
+                        const productName = item.getAttribute('data-name').toLowerCase();
+
+                        // If the product name doesn't match the search query, hide it
+                        if (!productName.includes(searchQuery)) {
+                            item.style.display = 'none';
+                        } else {
+                            item.style.display = 'block';
+                        }
+                    });
                 }
+            });
 
-                // Redirect back to all products and stores after 15 seconds of inactivity
-                setTimeout(function() {
-                    if (searchQuery) {
-                        window.location.href = window.location.pathname;
-                    }
-                }, 15000);
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedCategory = urlParams.get('category') || 'all';
+
+            document.querySelectorAll('.menu-card').forEach(card => {
+                const categoryText = card.querySelector('p').textContent.trim().toLowerCase();
+                if (categoryText === selectedCategory.toLowerCase()) {
+                    card.classList.add('active');
+                } else {
+                    card.classList.remove('active');
+                }
+            });
 
 
-                // Profile dropdown toggle
+
+            const searchQuery = new URLSearchParams(window.location.search).get('search');
+
+            const allProducts = document.getElementById("allProducts");
+            const allStores = document.getElementById("allStores");
+            const searchProducts = document.getElementById("searchProducts");
+            const searchStores = document.getElementById("searchStores");
+
+            if (searchQuery) {
+                allProducts.style.display = 'none';
+                allStores.style.display = 'none';
+            }
+
+            // Redirect back to all products and stores after 15 seconds of inactivity
+            setTimeout(function() {
+                if (searchQuery) {
+                    window.location.href = window.location.pathname;
+                }
+            }, 15000);
+
+
+            // Profile dropdown toggle
+            const profile = document.querySelector('.profile');
+            const dropdown = document.querySelector('.dropdown');
+            profile.addEventListener('click', () => {
+                dropdown.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!profile.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+
+            // Carousel for images
+            const carouselImages = document.querySelector('.carousel-images');
+            const images = document.querySelectorAll('.carousel-images img');
+            const prevButton = document.querySelector('.carousel-button.left');
+            const nextButton = document.querySelector('.carousel-button.right');
+            console.log('Prev Button:', prevButton);
+            console.log('Next Button:', nextButton);
+
+            prevButton.addEventListener('click', () => {
+                console.log('Prev Button Clicked');
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateCarousel();
+            });
+
+            nextButton.addEventListener('click', () => {
+                console.log('Next Button Clicked');
+                currentIndex = (currentIndex + 1) % images.length;
+                updateCarousel();
+            });
+
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const offset = -currentIndex * 100; // Move by 100% of container width
+                carouselImages.style.transform = `translateX(${offset}%)`;
+            }
+
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                console.log('Next: ', currentIndex); // Debugging
+                updateCarousel();
+            });
+
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                console.log('Prev: ', currentIndex); // Debugging
+                updateCarousel();
+            });
+
+            function autoSlide() {
+                currentIndex = (currentIndex + 1) % images.length;
+                console.log('AutoSlide: ', currentIndex);
+                updateCarousel();
+            }
+
+            setInterval(autoSlide, 3000);
+            updateCarousel();
+
+
+            document.addEventListener('DOMContentLoaded', () => {
                 const profile = document.querySelector('.profile');
                 const dropdown = document.querySelector('.dropdown');
-                profile.addEventListener('click', () => {
-                    dropdown.classList.toggle('active');
-                });
 
-                // Close dropdown when clicking outside
-                document.addEventListener('click', (e) => {
-                    if (!profile.contains(e.target)) {
-                        dropdown.classList.remove('active');
-                    }
-                });
-
-                // Carousel for images
-                const carouselImages = document.querySelector('.carousel-images');
-                const images = document.querySelectorAll('.carousel-images img');
-                const prevButton = document.querySelector('.carousel-button.left');
-                const nextButton = document.querySelector('.carousel-button.right');
-                console.log('Prev Button:', prevButton);
-                console.log('Next Button:', nextButton);
-
-                prevButton.addEventListener('click', () => {
-                    console.log('Prev Button Clicked');
-                    currentIndex = (currentIndex - 1 + images.length) % images.length;
-                    updateCarousel();
-                });
-
-                nextButton.addEventListener('click', () => {
-                    console.log('Next Button Clicked');
-                    currentIndex = (currentIndex + 1) % images.length;
-                    updateCarousel();
-                });
-
-                let currentIndex = 0;
-
-                function updateCarousel() {
-                    const offset = -currentIndex * 100; // Move by 100% of container width
-                    carouselImages.style.transform = `translateX(${offset}%)`;
-                }
-
-                nextButton.addEventListener('click', () => {
-                    currentIndex = (currentIndex + 1) % images.length;
-                    console.log('Next: ', currentIndex); // Debugging
-                    updateCarousel();
-                });
-
-                prevButton.addEventListener('click', () => {
-                    currentIndex = (currentIndex - 1 + images.length) % images.length;
-                    console.log('Prev: ', currentIndex); // Debugging
-                    updateCarousel();
-                });
-
-                function autoSlide() {
-                    currentIndex = (currentIndex + 1) % images.length;
-                    console.log('AutoSlide: ', currentIndex);
-                    updateCarousel();
-                }
-
-                setInterval(autoSlide, 3000);
-                updateCarousel();
-
-
-                document.addEventListener('DOMContentLoaded', () => {
-                    const profile = document.querySelector('.profile');
-                    const dropdown = document.querySelector('.dropdown');
-
-                    if (profile && dropdown) {
-                        profile.addEventListener('click', (event) => {
-                            event.stopPropagation();
-                            dropdown.classList.toggle('active');
-                        });
-
-                        // Close dropdown when clicking outside
-                        document.addEventListener('click', (event) => {
-                            if (!profile.contains(event.target)) {
-                                dropdown.classList.remove('active');
-                            }
-                        });
-                    } else {
-                        console.error("Profile or dropdown elements not found.");
-                    }
-                });
-
-
-
-
-
-
-                // Handle the "See More" button functionality
-                const seeMoreButton = document.getElementById('see-more');
-                const moreItems = document.querySelectorAll('.more-item');
-                seeMoreButton.addEventListener('click', () => {
-                    moreItems.forEach(item => {
-                        item.style.display = 'block'; // Show hidden items
+                if (profile && dropdown) {
+                    profile.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        dropdown.classList.toggle('active');
                     });
-                    seeMoreButton.style.display = 'none'; // Hide the "See More" button
-                });
 
-                // Recommended items carousel
-                const recommendedCarouselImages = document.querySelector('#recommended-items');
-                const recommendedItems = document.querySelectorAll('#recommended-items .item');
-                const prevRecommendedButton = document.querySelector('.recommendations .carousel-button.left');
-                const nextRecommendedButton = document.querySelector('.recommendations .carousel-button.right');
-                let currentRecommendedIndex = 0;
-
-                function updateRecommendedCarousel() {
-                    const offset = -currentRecommendedIndex * 200;
-                    recommendedCarouselImages.style.transform = `translateX(${offset}px)`;
+                    // Close dropdown when clicking outside
+                    document.addEventListener('click', (event) => {
+                        if (!profile.contains(event.target)) {
+                            dropdown.classList.remove('active');
+                        }
+                    });
+                } else {
+                    console.error("Profile or dropdown elements not found.");
                 }
+            });
 
-                nextRecommendedButton.addEventListener('click', () => {
-                    currentRecommendedIndex = (currentRecommendedIndex + 1) % recommendedItems.length;
-                    updateRecommendedCarousel();
-                });
 
-                prevRecommendedButton.addEventListener('click', () => {
-                    currentRecommendedIndex = (currentRecommendedIndex - 1 + recommendedItems.length) % recommendedItems.length;
-                    updateRecommendedCarousel();
+
+
+
+
+            // Handle the "See More" button functionality
+            const seeMoreButton = document.getElementById('see-more');
+            const moreItems = document.querySelectorAll('.more-item');
+            seeMoreButton.addEventListener('click', () => {
+                moreItems.forEach(item => {
+                    item.style.display = 'block'; // Show hidden items
                 });
-            </script>
+                seeMoreButton.style.display = 'none'; // Hide the "See More" button
+            });
+
+            // Recommended items carousel
+            const recommendedCarouselImages = document.querySelector('#recommended-items');
+            const recommendedItems = document.querySelectorAll('#recommended-items .item');
+            const prevRecommendedButton = document.querySelector('.recommendations .carousel-button.left');
+            const nextRecommendedButton = document.querySelector('.recommendations .carousel-button.right');
+            let currentRecommendedIndex = 0;
+
+            function updateRecommendedCarousel() {
+                const offset = -currentRecommendedIndex * 200;
+                recommendedCarouselImages.style.transform = `translateX(${offset}px)`;
+            }
+
+            nextRecommendedButton.addEventListener('click', () => {
+                currentRecommendedIndex = (currentRecommendedIndex + 1) % recommendedItems.length;
+                updateRecommendedCarousel();
+            });
+
+            prevRecommendedButton.addEventListener('click', () => {
+                currentRecommendedIndex = (currentRecommendedIndex - 1 + recommendedItems.length) % recommendedItems.length;
+                updateRecommendedCarousel();
+            });
+        </script>
 
 </body>
 

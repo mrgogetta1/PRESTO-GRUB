@@ -60,30 +60,9 @@ if (!$result) {
     <link rel="shortcut icon" href="uploads/chef-hat.png" type="image/svg+xml">
 
     <style>
-        .footer {
-            background: linear-gradient(45deg, #2e8b57, #042d86);
-            color: #fff;
-            padding: 18px 20px;
-            font-family: Arial, sans-serif;
-            position: relative;
-            left: 120px;
-            margin: 0 130px !important;
-            /* Remove any extra margin */
-        }
-
-        .about-company h3 {
-            font-size: 25px;
-            color: white;
-            font-weight: 800;
-            margin-top: 60px !important;
-            /* Remove margin to bring it closer to the map */
-            padding-top: 0;
-            /* Remove any padding on top */
-
-        }
-
-
         /* Hide the sidebar and show the toggle button when screen width <= 400px */
+
+       
         @media (max-width: 400px) {
             /* .sidebar {
     left: -200px; 
@@ -99,15 +78,7 @@ if (!$result) {
                 z-index: 15;
             }
 
-            .main-content {
-                margin-left: 0;
-                /* Remove margin when sidebar is hidden */
-            }
 
-            .main-content.shifted {
-                margin-left: 200px;
-                /* Adjust when sidebar is visible */
-            }
 
             /* .sidebar-menu li {
     position: relative;
@@ -119,12 +90,6 @@ if (!$result) {
 
         @media (max-width: 1024px) {
 
-            .footer-content {
-                width: 400px;
-                position: relative;
-                left: 200px;
-                gap: 200px;
-            }
 
             .contact-info {
                 margin-top: 30px;
@@ -134,12 +99,6 @@ if (!$result) {
 
         @media (max-width: 860px) {
 
-            .footer-content {
-                width: 350px;
-                position: relative;
-                left: 150px;
-                gap: 200px;
-            }
 
             .contact-info {
                 margin-top: 30px;
@@ -150,20 +109,10 @@ if (!$result) {
         @media (max-width: 750px) {
 
 
-            .footer {
-                width: 80%;
-            }
 
-            .footer-content {
-                width: 100%;
-                position: relative;
-                left: 150px;
-                gap: 100px;
-            }
 
-            .about-company {
-                padding-right: 150px;
-            }
+
+
 
             .contact-info {
                 margin-top: 30px;
@@ -173,15 +122,7 @@ if (!$result) {
 
         @media (max-width: 640px) {
 
-            .footer {
-                width: 75%;
-            }
 
-            .footer-content {
-                width: 350px;
-                position: relative;
-                display: block !important;
-            }
 
 
             .contact-info {
@@ -189,11 +130,7 @@ if (!$result) {
                 display: block !important;
             }
 
-            .about-company {
-                display: block;
-                position: relative;
-                right: 100px;
-            }
+
 
         }
 
@@ -234,14 +171,6 @@ if (!$result) {
     z-index: 15;
   } */
 
-            .main-content {
-                margin-left: 0;
-                /* Remove margin when sidebar is hidden */
-            }
-
-            .main-content.shifted {
-                margin-left: 200px;
-            }
 
             /* .sidebar-menu li {
     position: relative;
@@ -342,12 +271,12 @@ if (!$result) {
                 <a href="index.php?page=<?php echo $page + 1; ?>&search=<?php echo urlencode($search_query); ?>" class="pagination-btn">Next</a>
             <?php endif; ?>
         </div>
-
+        <?php include 'footer.php'; ?>
     </div>
 
 
     <!-- Footer -->
-    <?php include 'footer.php'; ?>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

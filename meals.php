@@ -107,42 +107,6 @@ $total_pages = ceil($total_products / $limit);
         .view-button:hover {
             background-color: #218838;
         }
-
-
-        .footer {
-            background: linear-gradient(45deg, #2e8b57, #042d86);
-            color: #fff;
-            padding: 18px 20px;
-            font-family: Arial, sans-serif;
-            position: relative;
-            left: 120px;
-            margin: 0 130px !important;
-            /* Remove any extra margin */
-        }
-
-        .about-company h3 {
-            font-size: 25px;
-            color: white;
-            font-weight: 800;
-            margin-top: 60px !important;
-            /* Remove margin to bring it closer to the map */
-            padding-top: 0;
-            /* Remove any padding on top */
-
-        }
-
-        @media (max-width: 1024px) {
-            .footer {
-                top: -260px;
-            }
-        }
-
-        @media (max-width: 800px) {
-            .footer {
-                top: -260px;
-                width: 600px;
-            }
-        }
     </style>
 </head>
 
@@ -178,7 +142,7 @@ $total_pages = ceil($total_products / $limit);
                 </div>
                 <button class="search-btn"><i class="fa fa-search"></i></button>
             </div>
-            <div class="cart-profile-container">
+            <div class="cart-profile-container" id="cart-profile-container">
                 <!-- <div class="notification-icon">
                     <i class="fa fa-bell"></i>  
                 </div> -->
@@ -247,13 +211,24 @@ $total_pages = ceil($total_products / $limit);
             }
             ?>
         </div>
+
+        <!-- Footer -->
+        <?php include 'footer.php'; ?>
     </div>
 
-
-    <!-- Footer -->
-    <?php include 'footer.php'; ?>
-
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchBtn = document.querySelector('.search-btn');
+            const searchForm = document.querySelector('.search-form');
+            const cartprofile = document.querySelector('#cart-profile-container');
+
+            searchBtn.addEventListener('click', function() {
+                searchForm.classList.toggle('active');
+                cartprofile.classList.toggle('hide');
+                this.classList.toggle('active');
+                this.innerHTML = this.classList.contains('active') ? '<i class="fa fa-times"></i>' : '<i class="fa fa-search"></i>';
+            });
+        });
         document.addEventListener('DOMContentLoaded', function() {
             const toggleBtn = document.getElementById('toggle-btn');
             const sidebar = document.getElementById('sidebar');

@@ -1,16 +1,28 @@
 /* Ensure no overflow in case of screen resize */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto; /* Enable vertical scrolling */
+  margin: 0%;
+  padding: 0%;
+  
 }
 
 /* General body and html styles */
 html,
 body {
-  height: 117%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
 }
+
 h2,
 h3 {
   font-weight: 600;
@@ -20,28 +32,40 @@ h3 {
 
 /* Main Content Styles */
 .main-content {
-  margin-left: 250px; /* No shift when sidebar is toggled */
+  margin-left: 250px;
+  /* No shift when sidebar is toggled */
   padding: 20px;
   margin-top: 20px;
-  margin-bottom: 200px;
 
-  transition: margin-left 0.4s ease; /* Smooth transition */
+  overflow-x: hidden;
+  /* Prevent horizontal overflow */
+  overflow-y: auto;
+  /* Enable vertical scrolling if content overflows */
+
+  transition: margin-left 0.4s ease;
+  /* Smooth transition */
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; */
 }
-
 /* When Sidebar is hidden */
 .main-content.fullscreen {
   margin-left: 0; /* Fullscreen mode when sidebar is hidden */
 }
 
-/* When Sidebar is visible */
 .main-content.shifted {
-  margin-left: 350px; /* Matches sidebar width */
+  margin-left: 350px;
+  /* Matches sidebar width */
 
   @media (max-width: 400px) {
     margin-left: 200px;
   }
-}
 
+  @media (max-width: 500px) {
+    margin-left: 220px;
+  }
+}
 /* Ensure smooth transition for main content */
 .main-content {
   transition: margin-left 0.4s ease;
@@ -152,11 +176,9 @@ h6 {
 }
 
 /* Section Styling */
-.section {
-  text-align: center;
-  margin: 40px 0;
-  padding: 20px; /* Added padding for more space inside */
-  border-radius: 10px;
+section{
+  width: 100% !important;
+  
 }
 
 .section h2 {
@@ -185,6 +207,7 @@ h3:focus {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Individual Item Styling */
 .item {

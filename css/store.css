@@ -1,21 +1,27 @@
 /* Ensure no overflow in case of screen resize */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto; /* Enable vertical scrolling */
+  margin: 0%;
+  padding: 0%;
+  
 }
 
 /* General body and html styles */
 html,
 body {
   height: 100%;
-  overflow: hidden;
+  margin: 0%;
+  padding: 0%;
+
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
   overflow-y: auto;
-  margin: 0;
- 
-  padding: 0;
+  /* Enable vertical scrolling */
 }
+
 h2,
 h3 {
   font-weight: 600;
@@ -23,41 +29,56 @@ h3 {
   margin: 0;
 }
 
-
-/* Main Content Styles */
 .main-content {
-  margin-left: 250px; /* No shift when sidebar is toggled */
+  margin-left: 250px;
+  /* No shift when sidebar is toggled */
   padding: 20px;
   margin-top: 20px;
-  margin-bottom: 200px;
-  transition: margin-left 0.4s ease; /* Smooth transition */
+
+  overflow-x: hidden;
+  /* Prevent horizontal overflow */
+  overflow-y: auto;
+  /* Enable vertical scrolling if content overflows */
+
+  transition: margin-left 0.4s ease;
+  /* Smooth transition */
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; */
 }
 
-/* When Sidebar is hidden */
 .main-content.fullscreen {
-  margin-left: 0; /* Fullscreen mode when sidebar is hidden */
+  margin-left: 0;
+  /* Fullscreen mode when sidebar is hidden */
 }
 
-/* When Sidebar is visible */
 .main-content.shifted {
-  margin-left: 350px; /* Matches sidebar width */
+  margin-left: 350px;
+  /* Matches sidebar width */
 
   @media (max-width: 400px) {
     margin-left: 200px;
   }
+
+  @media (max-width: 500px) {
+    margin-left: 220px;
+  }
 }
 
-/* Ensure smooth transition for main content */
-.main-content {
-  transition: margin-left 0.4s ease;
-}
+/* @media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+  }
+} */
 
+/* Main-border */
 .main-border {
   background-color: white;
   width: 100%;
 }
 
-
+/* Button Styles */
 .btn-login {
   background-color: #007bff;
   color: #fff;
@@ -67,13 +88,10 @@ h3 {
   text-decoration: none;
   font-weight: bold;
 }
+
 .btn-login:hover {
   background-color: #0056b3;
 }
-
-/* Other styles for carousel, items, etc... */
-
-/* Main Content Section */
 
 /* Headings */
 h1,
@@ -82,22 +100,26 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Merriweather", serif; /* Updated font for headings */
+  font-family: "Merriweather", serif;
   font-weight: normal;
   color: black;
   margin: 5px 0;
 }
 
 /* Section Styling */
-.section {
+/* .section {
   text-align: center;
   margin: 40px 0;
-  padding: 20px; /* Added padding for more space inside */
+  padding: 20px;
   border-radius: 10px;
+} */
+section{
+  width: 100% !important;
+  
 }
-
 .section h2 {
   font-size: 24px;
+
   margin-bottom: 20px;
 }
 
@@ -106,39 +128,37 @@ h3:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(46, 204, 113, 0.7);
 }
-
-/* Items Container Styling */
+/* Styling for the items section */
 .items {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 20px;
-  justify-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 20px;
-  width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  top: 5px;
   background: linear-gradient(45deg, #2e8b57, #042d86);
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  min-width: 100% !important;
+  /* background-color: red; */
 }
 
-/* Individual Item Styling */
-.item {
+/* Styling for individual item */
+.items .item {
   background-color: #fff;
   border-radius: 10px;
   padding: 15px;
+  width: 270px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.item:hover {
+.items .item:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Item Image Styling */
+/* Styling for the item image */
 .item img {
   width: 100%;
   height: 200px;
@@ -147,12 +167,68 @@ h3:focus {
   margin-bottom: 15px;
 }
 
-/* Product Name Styling */
+/* Styling for the item title */
 .item h4 {
   font-size: 1.5em;
   font-weight: bold;
   color: black;
   margin: 10px 0;
+}
+
+/* Styling for the view store button */
+button {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #2e8b57, #042d86);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #216c40;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .items {
+      justify-content: center;
+  }
+
+  .items .item {
+      width: 100%;
+      max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .items {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .items .item {
+      width: 90%;
+  }
+}
+@media (max-width: 420px) {
+  .items {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    
+  }
+
+  .items .item {
+      width: 90%;
+  }
 }
 
 /* Button Styling */
@@ -176,6 +252,7 @@ button:active {
   transform: translateY(1px);
 }
 
+/* Pagination Styling */
 .pagination {
   text-align: center;
   margin: 220px -20px;
@@ -207,8 +284,6 @@ button:active {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
- 
-
   .items {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1000px;
@@ -216,15 +291,7 @@ button:active {
   }
 }
 
-@media (max-width: 930px) {
-
-}
-
 @media (max-width: 800px) {
-
-
- 
-
   .items {
     grid-template-columns: repeat(2, 1fr);
     max-width: 1000px;
@@ -243,12 +310,7 @@ button:active {
   }
 }
 
-@media (max-width: 700px) {
-
-}
-
 @media (max-width: 640px) {
-
   .items {
     grid-template-columns: repeat(2, 1fr);
     width: 450px;
@@ -257,13 +319,12 @@ button:active {
 
 @media (max-width: 540px) {
   .items {
-    grid-template-columns: repeat(1fr);
+    grid-template-columns: 1fr;
     width: 350px !important;
   }
 }
 
 @media (max-width: 490px) {
-
   .items {
     grid-template-columns: 1fr;
     width: 400px !important;
@@ -279,30 +340,29 @@ button:active {
   }
 
   body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 100%; /* Ensure body width is 100% of the viewport */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    width: 100%;
+    /* Ensure body width is 100% of the viewport */
   }
 
   .main-content {
     width: 90%;
     overflow-x: hidden;
   }
-
-
 }
 
 @media (max-width: 400px) {
   body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 90%; /* Ensure body width is 100% of the viewport */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    width: 100%;
   }
 
   .main-content {
     width: 100%;
     overflow-x: hidden;
   }
-
-  
 
   .items {
     max-width: 300px;
@@ -313,15 +373,14 @@ button:active {
 
 @media (max-width: 320px) {
   body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 100%; /* Ensure body width is 100% of the viewport */
+    overflow-x: hidden;
+    width: 100%;
   }
 
   .main-content {
     width: 90%;
     overflow-x: hidden;
   }
-
 
   .login {
     position: relative;
