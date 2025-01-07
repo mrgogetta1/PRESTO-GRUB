@@ -136,7 +136,7 @@ $totalCanceledOrders = $canceledOrdersResult->fetch_assoc()['total_canceled_orde
 /* Glow for each specific color */
 .glow-icon.bg-primary {
     background: #007bff;
-    box-shadow: 0 0 40px rgba(0, 123, 255, 1), 
+    box-shadow: 0 0 40px rgba(0, 124, 255, 1), 
                 0 0 80px rgba(0, 123, 255, 1), 
                 0 0 120px rgba(0, 123, 255, 1);
 }
