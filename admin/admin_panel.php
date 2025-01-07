@@ -136,7 +136,11 @@ $totalCanceledOrders = $canceledOrdersResult->fetch_assoc()['total_canceled_orde
 /* Glow for each specific color */
 .glow-icon.bg-primary {
     background: #007bff;
+<<<<<<< HEAD
     box-shadow: 0 0 40px rgba(0, 124, 255, 1), 
+=======
+    box-shadow: 0 0 40px rgba(0, 123, 255, 1), 
+>>>>>>> 0043dea (updated dashboard panel menu)
                 0 0 80px rgba(0, 123, 255, 1), 
                 0 0 120px rgba(0, 123, 255, 1);
 }
@@ -268,7 +272,10 @@ $totalCanceledOrders = $canceledOrdersResult->fetch_assoc()['total_canceled_orde
         <a href="users.php" onclick="showUsers()">Users</a>
     </div>
     <div class="content" id="dashboard">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0043dea (updated dashboard panel menu)
     <h2 class="text-center">Welcome to the Presto Grub Admin Panel!</h2>
     <div class="row">
         <!-- Total Users -->
