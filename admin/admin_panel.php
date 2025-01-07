@@ -268,6 +268,7 @@ $totalCanceledOrders = $canceledOrdersResult->fetch_assoc()['total_canceled_orde
         <a href="users.php" onclick="showUsers()">Users</a>
     </div>
     <div class="content" id="dashboard">
+
     <h2 class="text-center">Welcome to the Presto Grub Admin Panel!</h2>
     <div class="row">
         <!-- Total Users -->

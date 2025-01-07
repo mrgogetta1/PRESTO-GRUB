@@ -320,28 +320,19 @@ if (!empty($search)) {
         <div class="main-border">
             <!-- Carousel and Other Sections -->
             <div class="carousel-container">
-                <!-- Carousel Section -->
-                <div class="carousel">
-                    <button class="carousel-button left">&#x3c;</button>
-                    <div class="carousel-images">
-                        <img src="uploads/07b7e99bb01cca8732387d18919b2b4e.jpg" alt="Dish 1">
-                        <img src="uploads/1.jpg" alt="Pizza">
-                        <img src="uploads/124751a8d70d02adb4c829a101270d00.jpg" alt="Wine">
-                    </div>
-                    <button class="carousel-button right">&#x3e;</button>
-                    <div class="carousel-indicators">
-                        <span class="indicator active" data-slide="0"></span>
-                        <span class="indicator" data-slide="1"></span>
-                        <span class="indicator" data-slide="2"></span>
-                    </div>
+                <!-- Video Section -->
+                <div class="video">
+                    <video controls autoplay muted loop class="responsive-video">
+                        <source src="uploads/montage.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
 
-                <!-- Image Section -->
+                <!-- Side Image Section -->
                 <div class="carousel-side-image">
                     <img src="uploads/emailad.png" alt="Side Image">
                 </div>
             </div>
-
             <div class="recommendations">
                 <div class="recommendations-header">
                     <h2>MOST SOLD PRODUCTS</h2>
