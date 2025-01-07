@@ -269,7 +269,7 @@ if (!$result) {
                 </div>
                 <button class="search-btn"><i class="fa fa-search"></i></button>
             </div>
-            <div class="cart-profile-container">
+            <div class="cart-profile-container" id="cart-profile-container">
                 <div class="notification-icon">
                     <i class="fa fa-bell"></i>
                 </div>
@@ -350,6 +350,18 @@ if (!$result) {
     <?php include 'footer.php'; ?>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchBtn = document.querySelector('.search-btn');
+            const searchForm = document.querySelector('.search-form');
+            const cartprofile = document.querySelector('#cart-profile-container');
+
+            searchBtn.addEventListener('click', function() {
+                searchForm.classList.toggle('active');
+                cartprofile.classList.toggle('hide');
+                this.classList.toggle('active');
+                this.innerHTML = this.classList.contains('active') ? '<i class="fa fa-times"></i>' : '<i class="fa fa-search"></i>';
+            });
+        });
         document.addEventListener('DOMContentLoaded', function() {
             const toggleBtn = document.getElementById('toggle-btn');
             const sidebar = document.getElementById('sidebar');

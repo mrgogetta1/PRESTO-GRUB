@@ -261,7 +261,7 @@ if (!empty($search)) {
                     </div>
                     <button class="search-btn"><i class="fa fa-search"></i></button>
                 </div>
-                <!-- Rest of your header content -->
+                
             </div>
 
             <div class="cart-profile-container" id="cart-profile-container">
@@ -351,10 +351,10 @@ if (!empty($search)) {
                 <div class="recommendations-header">
                     <h2>MOST SOLD PRODUCTS</h2>
                 </div>
-                <div class="order-items">
+                <div class="items">
                     <?php if ($most_ordered_result && $most_ordered_result->num_rows > 0): ?>
                         <?php while ($most_ordered_product = $most_ordered_result->fetch_assoc()): ?>
-                            <div class="product-card">
+                            <div class="product-card reco-item">
                                 <div class="product-card">
                                     <!-- Product Image -->
                                     <img src="productimg/<?php echo htmlspecialchars($most_ordered_product['image']); ?>"

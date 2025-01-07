@@ -323,6 +323,7 @@ h3 {
   justify-content: center;
 }
 
+
 /* Product Card */
 .product-card {
   width: 300px;
@@ -332,7 +333,16 @@ h3 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-
+@media (max-width:1000px) {
+  .product-card.reco-item {
+    height: fit-content;
+  }
+  .product-card.reco-item .product-card{  
+    width: 90%;
+    height: 90%;
+    min-width: 200px;
+  }
+}
 .product-card:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -473,6 +483,7 @@ h3 {
   position: relative;
   left: 59px;
   margin-bottom: 40px;
+  row-gap: 10px;
   width: 90%;
   justify-content: space-around;
 }
