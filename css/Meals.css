@@ -7,6 +7,7 @@
 body {
   margin: 0%;
   padding: 0%;
+  position: relative;
   
 }
 
@@ -194,15 +195,17 @@ h3:focus {
 
 /* Items Container Styling */
 .items {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
-  justify-items: center;
   padding: 20px;
   width: 100%;
+  min-width: fit-content;
   max-width: 1300px;
   margin: 0 auto;
-  height: 1050px;
+  height: fit-content;
   background: linear-gradient(45deg, #2e8b57, #042d86);
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -214,6 +217,7 @@ h3:focus {
   background-color: #fff;
   border-radius: 10px;
   padding: 15px;
+  width: 300px;
   height: 430px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -315,14 +319,12 @@ button:active {
 }
 
 /* Responsive Styling for smaller screens */
-@media (max-width: 768px) {
-  .items {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(200px, 1fr)
-    ); /* Smaller columns on mobile */
-  }
-
+@media (max-width: 820px) {
+  
+  } 
+section{
+  margin: 10px;
+}
   .item {
     padding: 15px;
   }
@@ -338,16 +340,13 @@ button:active {
   .item button {
     font-size: 14px;
   }
-}
+
 
 @media (max-width: 480px) {
-  .items {
-    grid-template-columns: 1fr; /* Single column on very small screens */
-  }
 
   .item img {
     width: 180px;
-    height: 180px;
+    height: 100px;
   }
 
   .item h4 {
@@ -387,12 +386,7 @@ button:active {
     left: -20px;
   }
 
-  .footer {
-    position: relative;
-    top: -250px !important;
-    left: -110px !important;
-    max-width: 350px !important;
-  }
+
 
 
   .profile {
@@ -409,57 +403,25 @@ button:active {
 @media (max-width: 1024px) {
 
 
-  .items {
-    grid-template-columns: repeat(2, 1fr);
-    height: 2200px;
-    margin-bottom: 100px;
-  }
+  
 }
 
 @media (max-width: 820px) {
 
-  .items {
-    width: 500px;
-    grid-template-columns: repeat(2, 1fr);
-    height: 2200px;
-    left: -30px;
-    margin-bottom: 100px;
-  }
 
-  .item {
-    width: 200px;
-  }
 
-  .item img {
-    width: 100%;
-  }
+ 
 }
 
 @media (max-width: 800px) {
 
 
-  .items {
-    width: 600px;
-    grid-template-columns: repeat(2, 1fr);
-    height: 2200px;
-    margin-bottom: 100px;
-  }
 }
 
 @media (max-width: 768px) {
 
-  .items {
-    width: 470px !important;
-    grid-template-columns: repeat(2, 1fr);
-    height: 2200px;
-    position: relative;
-    left: -20px;
-    margin-bottom: 100px;
-  }
 
-  .footer {
-    width: 460px !important;
-  }
+
 
   .about-company {
     position: relative;
@@ -483,12 +445,7 @@ button:active {
     left: 220px;
   }
 
-  .items {
-    max-width: 95%;
-    grid-template-columns: 1fr !important;
-    height: 200%;
-  }
-
+ 
   .pagination {
     position: relative;
     top: -100px;

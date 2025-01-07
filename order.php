@@ -108,24 +108,6 @@ $num_items = 0;
 
     <style>
         /* Hide the sidebar and show the toggle button when screen width <= 400px */
-        @media (max-width: 400px) {
-
-            .main-content {
-                margin-left: 0;
-                /* Remove margin when sidebar is hidden */
-            }
-
-            .main-content.shifted {
-                margin-left: 200px;
-                /* Adjust when sidebar is visible */
-            }
-
-
-        }
-
-        .footer {
-            margin-top: 120px !important;
-        }
     </style>
 </head>
 
@@ -143,7 +125,8 @@ $num_items = 0;
                 </div>
                 <button class="search-btn"><i class="fa fa-search"></i></button>
             </div>
-            <div class="cart-profile-container">
+            <div class="cart-profile-container" id="cart-profile-container">
+
                 <div class="notification-icon">
                     <i class="fa fa-bell"></i>
                 </div>
@@ -245,52 +228,64 @@ $num_items = 0;
 
         <!-- Footer -->
         <?php include 'footer.php'; ?>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchBtn = document.querySelector('.search-btn');
+            const searchForm = document.querySelector('.search-form');
+            const cartprofile = document.querySelector('#cart-profile-container');
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Select all quantity input fields
-                const quantityInputs = document.querySelectorAll('input[type="number"]');
+            searchBtn.addEventListener('click', function() {
+                searchForm.classList.toggle('active');
+                cartprofile.classList.toggle('hide');
+                this.classList.toggle('active');
+                this.innerHTML = this.classList.contains('active') ? '<i class="fa fa-times"></i>' : '<i class="fa fa-search"></i>';
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all quantity input fields
+            const quantityInputs = document.querySelectorAll('input[type="number"]');
 
-                // Update total price and total quantity when the quantity changes
-                quantityInputs.forEach(input => {
-                    input.addEventListener('change', function() {
-                        // Get the price and quantity of the product whose quantity was changed
-                        const productElement = input.closest('.product');
-                        const price = parseFloat(productElement.dataset.price); // Price of the product
-                        const quantity = parseInt(input.value); // New quantity entered by the user
+            // Update total price and total quantity when the quantity changes
+            quantityInputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    // Get the price and quantity of the product whose quantity was changed
+                    const productElement = input.closest('.product');
+                    const price = parseFloat(productElement.dataset.price); // Price of the product
+                    const quantity = parseInt(input.value); // New quantity entered by the user
 
-                        // Recalculate total price and total quantity
-                        let totalPrice = 0;
-                        let totalQuantity = 0;
+                    // Recalculate total price and total quantity
+                    let totalPrice = 0;
+                    let totalQuantity = 0;
 
-                        // Loop through each product and recalculate total price and quantity
-                        document.querySelectorAll('.product').forEach(product => {
-                            const productPrice = parseFloat(product.dataset.price);
-                            const productQuantity = parseInt(product.querySelector('input[type="number"]').value);
+                    // Loop through each product and recalculate total price and quantity
+                    document.querySelectorAll('.product').forEach(product => {
+                        const productPrice = parseFloat(product.dataset.price);
+                        const productQuantity = parseInt(product.querySelector('input[type="number"]').value);
 
-                            totalPrice += productPrice * productQuantity;
-                            totalQuantity += productQuantity;
-                        });
-
-                        // Update the total price and total quantity in the DOM
-                        document.getElementById('total-price').innerText = totalPrice.toFixed(2); // Update total price
-                        document.getElementById('total-quantity').innerText = totalQuantity; // Update total quantity
+                        totalPrice += productPrice * productQuantity;
+                        totalQuantity += productQuantity;
                     });
+
+                    // Update the total price and total quantity in the DOM
+                    document.getElementById('total-price').innerText = totalPrice.toFixed(2); // Update total price
+                    document.getElementById('total-quantity').innerText = totalQuantity; // Update total quantity
                 });
             });
+        });
 
 
-            document.addEventListener('DOMContentLoaded', function() {
-                const toggleBtn = document.getElementById('toggle-btn');
-                const sidebar = document.getElementById('sidebar');
-                const mainContent = document.querySelector('.main-content');
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggle-btn');
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.querySelector('.main-content');
 
-                toggleBtn.addEventListener('click', function() {
-                    sidebar.classList.toggle('active');
-                    mainContent.classList.toggle('shifted');
-                });
+            toggleBtn.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
+                mainContent.classList.toggle('shifted');
             });
-        </script>
+        });
+    </script>
 </body>
 
 </html>

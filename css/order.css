@@ -1,3 +1,62 @@
+/* General Reset and Styling */
+/* Ensure no overflow in case of screen resize */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* General body and html styles */
+html,
+body {
+  height: 100%;
+}
+h2,
+h3 {
+  font-weight: 600;
+  color: black;
+  margin: 0;
+  margin-top: 5px;
+}
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 250px; /* No shift when sidebar is toggled */
+  padding: 20px;
+  margin-top: 20px;
+
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+
+  transition: margin-left 0.4s ease; /* Smooth transition */
+}
+
+/* When Sidebar is hidden */
+.main-content.fullscreen {
+  margin-left: 0; /* Fullscreen mode when sidebar is hidden */
+}
+
+/* When Sidebar is visible */
+.main-content.shifted {
+  margin-left: 350px; /* Matches sidebar width */
+
+  @media (max-width: 400px) {
+    margin-left: 200px;
+  }
+
+  @media (max-width: 500px) {
+    margin-left: 220px;
+  }
+}
+
+/* Ensure smooth transition for main content */
+.main-content {
+  transition: margin-left 0.4s ease;
+}
+
+
 h2 {
   font-size: 34px;
   color: #fff;
@@ -8,26 +67,27 @@ h2 {
 
 /* Container */
 .container {
-  width: 50%;
+  width: 90%;
+  max-width: 1200px;
   padding: 20px;
   background: linear-gradient(45deg, #2e8b57, #042d86);
   border-radius: 8px;
-  margin-left: 340px;
+  margin: 30px auto;
   position: relative;
-  top: 30px;
-  margin-bottom: 150px;
 }
 
-
-
-.products {
+/* Products */
+.products,.products form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .product {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 15px;
@@ -40,16 +100,16 @@ h2 {
 }
 
 .product img {
-  width: 300px;
-  height: 260px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   object-fit: cover;
   border-radius: 15px;
+  flex-shrink: 0;
 }
 
 .cart .product img {
-  width: 220px;
-  height: 260px;
-  object-fit: cover;
+  max-width: 220px;
   border-radius: 8px;
   display: block;
   margin: 0 auto;
@@ -60,17 +120,17 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   margin-left: 20px;
-  width: 70%;
+  flex: 1;
 }
 
 .product-name {
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #f1f1f1;
 }
 
 .product-price {
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #f1c40f;
 }
 
@@ -79,7 +139,7 @@ h2 {
 }
 
 .product-form-group label {
-  font-size: 14px;
+  font-size: 0.9rem;
   color: #ddd;
 }
 
@@ -91,6 +151,8 @@ h2 {
   border-radius: 4px;
   background-color: #333;
   color: #fff;
+  width: 100%;
+  max-width: 200px;
 }
 
 .product-remove {
@@ -102,6 +164,7 @@ h2 {
   cursor: pointer;
   margin-top: 10px;
   transition: background-color 0.3s;
+  align-self: flex-start;
 }
 
 .product-remove:hover {
@@ -109,6 +172,12 @@ h2 {
 }
 
 /* Cart Summary */
+.cart,.products form{
+  display: flex ;
+  justify-content: center;
+ 
+  width: 100%;
+}
 .cart-total {
   display: flex;
   flex-direction: column;
@@ -122,20 +191,14 @@ h2 {
 .cart-summary {
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
-.total-price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #f1c40f;
-}
-
+.total-price,
 .total-quan {
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: bold;
-  color: #ffffff;
 }
 
 .checkout-action {
@@ -148,14 +211,13 @@ h2 {
   background-color: #27ae60;
   color: #fff;
   padding: 14px 20px;
-  /* Slightly adjust padding for better button size */
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 200px;
-  /* Ensures all buttons have the same width */
+  width: 100%;
+  max-width: 200px;
 }
 
 .checkout-btn:hover {
@@ -164,18 +226,54 @@ h2 {
 
 .empty-cart {
   color: #f1c40f;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
   margin-top: 20px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+
+
+  .product-info {
+    margin-left: 0;
+  }
+
+  .product {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product img {
+    margin-bottom: 15px;
+  }
+
+  .checkout-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-name {
+    font-size: 1.2rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .product-form-group label,
+  .product-form-group input,
+  .product-form-group select {
+    font-size: 0.8rem;
+  }
+}
+
+
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
+ 
 
   .cart-summary {
     font-size: 14px;
@@ -211,61 +309,7 @@ h2 {
   }
 }
 
-/* Ensure no overflow in case of screen resize */
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  /* Prevent horizontal scrolling */
-  overflow-y: auto;
-  /* Enable vertical scrolling */
-}
 
-/* General body and html styles */
-html,
-body {
-  height: 117%;
-}
-
-/* h2,
-h3 {
-  font-weight: 600;
-  color: rgb(255, 255, 255);
-  margin-top: 60px;
-} */
-
-/* Main Content Styles */
-.main-content {
-  margin-left: 250px;
-  /* No shift when sidebar is toggled */
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 200px;
-
-  transition: margin-left 0.4s ease;
-  /* Smooth transition */
-}
-
-/* When Sidebar is hidden */
-.main-content.fullscreen {
-  margin-left: 0;
-  /* Fullscreen mode when sidebar is hidden */
-}
-
-/* When Sidebar is visible */
-.main-content.shifted {
-  margin-left: 350px;
-  /* Matches sidebar width */
-
-  @media (max-width: 400px) {
-    margin-left: 200px;
-  }
-}
-
-/* Ensure smooth transition for main content */
-.main-content {
-  transition: margin-left 0.4s ease;
-}
 
 .main-border {
   background-color: white;
@@ -335,19 +379,9 @@ h3 {
 
 
 
-  .container {
-    width: 450px !important;
-    left: -340px;
-  }
 
-  .footer {
-    width: 470px;
-  }
 
-  .about-company {
-    position: relative;
-    right: 30px !important;
-  }
+
 }
 
 @media (max-width: 400px) {
@@ -371,16 +405,8 @@ h3 {
     left: 370px;
   }
 
-  .container {
-    max-width: 350px;
-    position: relative;
-    left: -350px;
-  }
 
-  .footer {
-    position: relative;
-    left: -5px !important;
-    width: 360px !important;
-  }
+
+
 
 }
