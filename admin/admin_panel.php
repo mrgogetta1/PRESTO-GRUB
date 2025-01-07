@@ -136,57 +136,57 @@ $totalCanceledOrders = $canceledOrdersResult->fetch_assoc()['total_canceled_orde
         <a href="users.php" onclick="showUsers()">Users</a>
     </div>
     <div class="content" id="dashboard">
-        <h2 class="text-center">Welcome to the Presto Grub Admin Panel!</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card text-white bg-primary mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Users</h5>
-                        <p class="card-text"><?php echo $userCount; ?></p>
+            <h2 class="text-center">Welcome to the Presto Grub Admin Panel!</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-body">
+                        <h5 class="card-title"><a href="users.php" class="text-white">Total Users</a></h5>
+                            <p class="card-text"><?php echo $userCount; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="users.php" class="text-white">Active Users</a></h5></h5>
+                            <p class="card-text"><?php echo $activeUserCount; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="admin_store.php" class="text-white">Total Stores</a></h5></h5>
+                            <p class="card-text"><?php echo $storeCount; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-info mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="admin_product.php" class="text-white">Total Products</a></h5></h5>
+                            <p class="card-text"><?php echo $productCount; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-danger mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="admin_order_complete.php" class="text-white">Completed Orders</a></h5></h5>
+                            <p class="card-text"><?php echo $totalCompletedOrders; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-dark mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Canceled Orders</h5>
+                            <p class="card-text"><?php echo $totalCanceledOrders; ?></p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card text-white bg-success mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Active Users</h5>
-                        <p class="card-text"><?php echo $activeUserCount; ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-white bg-warning mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Stores</h5>
-                        <p class="card-text"><?php echo $storeCount; ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-white bg-info mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Products</h5>
-                        <p class="card-text"><?php echo $productCount; ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-white bg-danger mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Completed Orders</h5>
-                        <p class="card-text"><?php echo $totalCompletedOrders; ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-white bg-dark mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Canceled Orders</h5>
-                        <p class="card-text"><?php echo $totalCanceledOrders; ?></p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-6 chart-container">
                 <canvas id="userChart"></canvas>
