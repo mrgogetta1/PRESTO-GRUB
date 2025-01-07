@@ -20,10 +20,10 @@ body {
 }
 .container {
   max-width: 850px;
-  width: 100%;
+  width: fit-content;
   position: relative;
-  left: 600px;
-  top: 80px;
+  left: 300px;
+   top: 80px;
   background: linear-gradient(
     45deg,
     #2e8b57,
@@ -37,9 +37,11 @@ body {
   @media (max-width: 400px) {
     width: 340px;
     left: 12px;
+    display: flex;
+    flex-direction: column;
   }
 
-  @media (max-width: 365px) {
+  @media (max-width: 400px) {
     width: 300px !important;
     left: 10px;
   }
@@ -78,81 +80,7 @@ h2 {
   color: aliceblue;
   text-align: center;
 }
-/* Sidebar Styling */
-.sidebar {
-  width: 200px;
-  color: white;
-  padding: 20px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0px;
-  z-index: 10;
-  transition: left 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: none; /* Remove individual background for the sidebar */
-}
 
-.sidebar.active {
-  left: 0; /* Slide in from the left */
-}
-
-/* Sidebar Logo */
-.sidebar-logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 20px;
-  margin-left: -20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Sidebar Menu Items */
-.sidebar-menu {
-  list-style: none;
-  padding: 0;
-  margin-top: -40px;
-  position: relative;
-  top: -150px;
-}
-
-.sidebar-menu li {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 15px;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.sidebar-menu li i {
-  font-size: 1.4rem;
-}
-
-.sidebar-menu li:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateX(5px);
-}
-
-.sidebar-menu li:active {
-  background-color: rgba(255, 255, 255, 0.3);
-  transform: translateX(10px);
-}
-
-.sidebar-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  position: relative;
-  top: -30px;
-  color: rgba(255, 255, 255, 0.8);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
 
 /* Smooth Toggle Button */
 .toggle-btn {

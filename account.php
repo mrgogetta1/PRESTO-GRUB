@@ -115,46 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="shortcut icon" href="uploads/chef-hat.png" type="image/svg+xml">
 
 </head>
-<style>
-    /* Hide the sidebar and show the toggle button when screen width <= 400px */
-@media (max-width: 400px) {
-  .sidebar {
-    left: -200px; /* Move sidebar out of view */
-  }
 
-  .toggle-btn {
-    display: block; /* Show toggle button */
-    position: fixed;
-    top: 10px;
-    font-size: 1.2rem;
-    left: -20px;
-    z-index: 15;
-  }
-
-  .main-content {
-    margin-left: 0; /* Remove margin when sidebar is hidden */
-  }
-
-  .main-content.shifted {
-    margin-left: 200px; /* Adjust when sidebar is visible */
-  }
-
-  .sidebar-menu li {
-    position: relative;
-    top: -640px !important;
-  }
-
-}
-
-.about-company h3 {
-            font-size: 20px;
-            margin-top: 33px;
-            position: relative;
-            top: -25px !important;
-            color: white;
-            font-weight: 800;
-        }
-</style>
 <body>
 <!-- Include your navbar here -->
 <?php include 'sidebar.php'; ?>
