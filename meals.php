@@ -57,11 +57,14 @@ $total_pages = ceil($total_products / $limit);
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Presto Grub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/Meals.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+
     <style>
         .pagination {
             display: flex;
@@ -113,15 +116,18 @@ $total_pages = ceil($total_products / $limit);
             font-family: Arial, sans-serif;
             position: relative;
             left: 120px;
-            margin: 0 130px !important; /* Remove any extra margin */
+            margin: 0 130px !important;
+            /* Remove any extra margin */
         }
 
         .about-company h3 {
             font-size: 25px;
             color: white;
             font-weight: 800;
-            margin-top: 60px !important; /* Remove margin to bring it closer to the map */
-            padding-top: 0; /* Remove any padding on top */
+            margin-top: 60px !important;
+            /* Remove margin to bring it closer to the map */
+            padding-top: 0;
+            /* Remove any padding on top */
 
         }
 
@@ -137,11 +143,11 @@ $total_pages = ceil($total_products / $limit);
                 width: 600px;
             }
         }
-
     </style>
 </head>
+
 <body>
-    <div class="sidebar" id="sidebar">
+    <!-- <div class="sidebar" id="sidebar">
         <h2 class="sidebar-logo">PrestoGrub</h2>
         <ul class="sidebar-menu">
         <li><a href="index.php"><i class="fas fa-home"></i> Home</a></li>
@@ -158,15 +164,19 @@ $total_pages = ceil($total_products / $limit);
 
     <button id="toggle-btn" class="toggle-btn">
         <i class="fas fa-bars"></i>
-    </button>
+    </button> -->
+    <?php include 'sidebar.php'; ?>
 
     <div class="main-content">
         <div class="header">
             <div class="header-center">
-                <form action="meals.php" method="GET">
-                    <input type="text" name="search" placeholder="Search" value="<?php echo htmlspecialchars($search_query); ?>">
-                    <button type="submit">Search</button>
-                </form>
+                <div class="search-form">
+                    <form action="index.php" method="GET">
+                        <input type="text" name="search" placeholder="Search">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+                <button class="search-btn"><i class="fa fa-search"></i></button>
             </div>
             <div class="cart-profile-container">
                 <!-- <div class="notification-icon">
@@ -176,86 +186,86 @@ $total_pages = ceil($total_products / $limit);
                     <i class="fas fa-shopping-cart cart-icon"></i>
                 </div>
                 <?php if (isset($_SESSION['username'])): ?>
-    <div class="profile">
-        <div class="profile-details">
-            <?php 
-            // Check if $profile_picture is set and is not empty
-            if (!empty($profile_picture)) {
-                $profilePicPath = "uploads/" . htmlspecialchars($profile_picture);
-            } else {
-                $profilePicPath = "uploads/default-profile.jpg"; // A fallback image if no profile picture is set
-            }
-            ?>
-            <img src="<?php echo $profilePicPath; ?>" alt="Profile Picture" class="profile-pic">
-            <span class="profile-name"><?php echo htmlspecialchars($username); ?></span>
-            <i class="fas fa-chevron-down profile-dropdown-icon"></i>
-        </div>
-        <div class="dropdown">
-            <a href="profile.php"><i class="fas fa-user"></i> My Profile</a>
-            <a href="account.php"><i class="fas fa-cog"></i> Settings</a>
-            <a href="function/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
-        </div>
-    </div>
-<?php else: ?>
-    <!-- Login Button -->
-    <div class="login">
-        <a href="login.php" class="btn-login">Login</a>
-    </div>
-<?php endif; ?>
+                    <div class="profile">
+                        <div class="profile-details">
+                            <?php
+                            // Check if $profile_picture is set and is not empty
+                            if (!empty($profile_picture)) {
+                                $profilePicPath = "uploads/" . htmlspecialchars($profile_picture);
+                            } else {
+                                $profilePicPath = "uploads/default-profile.jpg"; // A fallback image if no profile picture is set
+                            }
+                            ?>
+                            <img src="<?php echo $profilePicPath; ?>" alt="Profile Picture" class="profile-pic">
+                            <span class="profile-name"><?php echo htmlspecialchars($username); ?></span>
+                            <i class="fas fa-chevron-down profile-dropdown-icon"></i>
+                        </div>
+                        <div class="dropdown">
+                            <a href="profile.php"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="account.php"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="function/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <!-- Login Button -->
+                    <div class="login">
+                        <a href="login.php" class="btn-login">Login</a>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
 
         <h2>All Foods</h2> <!-- Title displayed above the section -->
         <section class="items">
-        <?php
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $avg_rating = round($row['avg_rating'], 1);
-                $total_reviews = $row['total_reviews'];
+            <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $avg_rating = round($row['avg_rating'], 1);
+                    $total_reviews = $row['total_reviews'];
 
-                echo "<div class='item'>";
-                echo "<img src='productimg/" . htmlspecialchars($row["image"]) . "' alt='" . htmlspecialchars($row["name"]) . "'>";
-                echo "<h4>" . htmlspecialchars($row["name"]) . "</h4>";
-                echo "<p class='price'>₱ " . htmlspecialchars($row["price"]) . "</p>";
-                echo "<p>" . htmlspecialchars($row["description"]) . "</p>";
-                echo "<a href='view_product.php?product_id=" . htmlspecialchars($row["product_id"]) . "' class='view-button'>View Product</a>";
-                echo "</div>";
+                    echo "<div class='item'>";
+                    echo "<img src='productimg/" . htmlspecialchars($row["image"]) . "' alt='" . htmlspecialchars($row["name"]) . "'>";
+                    echo "<h4>" . htmlspecialchars($row["name"]) . "</h4>";
+                    echo "<p class='price'>₱ " . htmlspecialchars($row["price"]) . "</p>";
+                    echo "<p>" . htmlspecialchars($row["description"]) . "</p>";
+                    echo "<a href='view_product.php?product_id=" . htmlspecialchars($row["product_id"]) . "' class='view-button'>View Product</a>";
+                    echo "</div>";
+                }
+            } else {
+                echo "<p>No products available.</p>";
             }
-        } else {
-            echo "<p>No products available.</p>";
-        }
 
-        $conn->close();
-        ?>
+            $conn->close();
+            ?>
         </section>
 
         <div class="pagination">
-        <?php
-        for ($i = 1; $i <= $total_pages; $i++) {
-            $active_class = ($page == $i) ? 'active' : '';
-            echo "<a href='meals.php?page=$i&search=" . urlencode($search_query) . "' class='page-link $active_class'>$i</a>";
-        }
-        ?>
+            <?php
+            for ($i = 1; $i <= $total_pages; $i++) {
+                $active_class = ($page == $i) ? 'active' : '';
+                echo "<a href='meals.php?page=$i&search=" . urlencode($search_query) . "' class='page-link $active_class'>$i</a>";
+            }
+            ?>
         </div>
     </div>
 
 
     <!-- Footer -->
-<?php include 'footer.php'; ?>
+    <?php include 'footer.php'; ?>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggle-btn');
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.querySelector('.main-content');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const toggleBtn = document.getElementById('toggle-btn');
-  const sidebar = document.getElementById('sidebar');
-  const mainContent = document.querySelector('.main-content');
-
-  toggleBtn.addEventListener('click', function () {
-    sidebar.classList.toggle('active');
-    mainContent.classList.toggle('shifted');
-  });
-});
+            toggleBtn.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
+                mainContent.classList.toggle('shifted');
+            });
+        });
     </script>
 
 </body>
+
 </html>

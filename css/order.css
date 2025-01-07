@@ -2,7 +2,8 @@ h2 {
   font-size: 34px;
   color: #fff;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0;
+  margin-top: 5px;
 }
 
 /* Container */
@@ -17,10 +18,7 @@ h2 {
   margin-bottom: 150px;
 }
 
-.cart {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .products {
   display: flex;
@@ -149,13 +147,15 @@ h2 {
 .checkout-btn {
   background-color: #27ae60;
   color: #fff;
-  padding: 14px 20px; /* Slightly adjust padding for better button size */
+  padding: 14px 20px;
+  /* Slightly adjust padding for better button size */
   font-size: 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 200px; /* Ensures all buttons have the same width */
+  width: 200px;
+  /* Ensures all buttons have the same width */
 }
 
 .checkout-btn:hover {
@@ -206,7 +206,8 @@ h2 {
 
   /* Adjust button widths on mobile */
   .button-group button {
-    width: 100%; /* Ensure buttons fill the available space */
+    width: 100%;
+    /* Ensure buttons fill the available space */
   }
 }
 
@@ -214,8 +215,10 @@ h2 {
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
 }
 
 /* General body and html styles */
@@ -223,142 +226,36 @@ html,
 body {
   height: 117%;
 }
-h2,
+
+/* h2,
 h3 {
   font-weight: 600;
   color: rgb(255, 255, 255);
   margin-top: 60px;
-}
-
-/* Sidebar Styling */
-.sidebar {
-  width: 200px;
-  background: linear-gradient(45deg, #2e8b57, #042d86);
-  color: white;
-  padding: 20px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0px; /* Initially hidden */
-  z-index: 10;
-  transition: left 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @media (max-width: 400px) {
-    width: 160px;
-  }
-}
-
-/* Sidebar when active */
-.sidebar.active {
-  left: 0; /* Slide in from the left */
-}
-
-/* Sidebar Logo */
-.sidebar-logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 20px;
-  margin-left: -20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Sidebar Menu Items */
-.sidebar-menu {
-  list-style: none;
-  padding: 0;
-  margin-top: -40px;
-  position: relative;
-  top: -150px;
-
-  @media (max-width: 400px) {
-    margin-top: 200px;
-  }
-}
-
-.sidebar-menu li {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 15px;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.sidebar-menu li i {
-  font-size: 1.4rem;
-}
-
-/* Hover and Active State */
-.sidebar-menu li:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateX(5px);
-}
-
-.sidebar-menu li:active {
-  background-color: rgba(255, 255, 255, 0.3);
-  transform: translateX(10px);
-}
-
-/* Sidebar Footer */
-.sidebar-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  position: relative;
-  top: -30px;
-  color: rgba(255, 255, 255, 0.8);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Smooth Toggle Button */
-.toggle-btn {
-  position: relative;
-  top: -5px;
-  margin-top: 25px;
-  margin-left: 50px;
-  z-index: 20;
-  font-size: 30px;
-  cursor: pointer;
-  border: none;
-  display: none;
-  color: white;
-  background-color: #1b5e20;
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.toggle-btn:hover {
-  background-color: #2e8b57;
-  transform: rotate(90deg);
-}
+} */
 
 /* Main Content Styles */
 .main-content {
-  margin-left: 250px; /* No shift when sidebar is toggled */
+  margin-left: 250px;
+  /* No shift when sidebar is toggled */
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 200px;
 
-  transition: margin-left 0.4s ease; /* Smooth transition */
+  transition: margin-left 0.4s ease;
+  /* Smooth transition */
 }
 
 /* When Sidebar is hidden */
 .main-content.fullscreen {
-  margin-left: 0; /* Fullscreen mode when sidebar is hidden */
+  margin-left: 0;
+  /* Fullscreen mode when sidebar is hidden */
 }
 
 /* When Sidebar is visible */
 .main-content.shifted {
-  margin-left: 350px; /* Matches sidebar width */
+  margin-left: 350px;
+  /* Matches sidebar width */
 
   @media (max-width: 400px) {
     margin-left: 200px;
@@ -373,75 +270,6 @@ h3 {
 .main-border {
   background-color: white;
   width: 100%;
-}
-
-/* Notification Section */
-.notification {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.notification-icon {
-  font-size: 24px;
-  cursor: pointer;
-  color: #555;
-  transition: color 0.3s;
-}
-
-.notification-icon:hover {
-  color: #2e8b57;
-}
-
-/* Notification Count */
-.notification-count {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 5px;
-  font-size: 14px;
-}
-
-.notification-dropdown {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  display: none; /* Ensure it's hidden initially */
-  max-height: 400px;
-  overflow-y: auto;
-  z-index: 100;
-}
-
-.notification-dropdown ul {
-  list-style-type: none;
-  padding: 15px;
-  margin: 0;
-}
-
-.notification-item {
-  padding: 10px;
-  border-bottom: 1px solid #f1f1f1;
-}
-
-.notification-item.unread {
-  background-color: #f9f9f9;
-  font-weight: bold;
-}
-
-.notification-item .notification-message {
-  display: block;
-}
-
-.notification-item .notification-time {
-  font-size: 12px;
-  color: #888;
 }
 
 .btn-login {
@@ -462,195 +290,50 @@ h3 {
 
 /* Main Content Section */
 
-/* Header Section */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  border-bottom: 2px solid #e4dcdc;
-  padding-bottom: 10px;
-
-  @media (max-width: 400px) {
-    margin-top: -20px;
-  }
-}
-
-.header input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.header-center {
-  position: relative;
-  left: 600px;
-}
-
-.header button {
-  padding: 10px;
-  background: linear-gradient(45deg, #2e8b57, #042d86);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.header button:hover {
-  background-color: #216c40;
-}
-
-/* Cart and Profile Section */
-.cart-profile-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  @media (max-width: 400px) {
-    position: relative;
-    right: 50px;
-  }
-}
-
-.cart {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.cart-icon {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.profile {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.profile-details {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.profile-pic {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: 2px solid #460eaf;
-  object-fit: cover;
-  transition: transform 0.2s;
-}
-
-.profile-pic:hover {
-  transform: scale(1.1);
-}
-
-.profile-name {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.profile-dropdown-icon {
-  font-size: 1rem;
-  color: #666;
-  transition: transform 0.3s;
-}
-
-.profile:hover .profile-dropdown-icon {
-  transform: rotate(180deg);
-}
-
-.dropdown {
-  position: absolute;
-  top: 55px;
-  right: 0;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 10px;
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  min-width: 150px;
-  z-index: 20;
-}
-
-.profile:hover .dropdown {
-  display: flex; /* Show dropdown on hover */
-}
-
-.dropdown a {
-  text-decoration: none;
-  color: #333;
-  font-size: 0.9rem;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.dropdown a i {
-  font-size: 1rem;
-}
-
-.dropdown a:hover {
-  background: linear-gradient(45deg, #2e8b57, #042d86);
-  color: #fff;
-}
 /* Button Group Styling */
 .button-group {
   display: flex;
-  flex-direction: column; /* Stack buttons vertically */
-  gap: 10px; /* Add space between the buttons */
-  align-items: flex-start; /* Align buttons to the left */
+  flex-direction: column;
+  /* Stack buttons vertically */
+  gap: 10px;
+  /* Add space between the buttons */
+  align-items: flex-start;
+  /* Align buttons to the left */
 }
 
 /* Checkout Buttons */
 .checkout-btn {
-  background-color: #27ae60; /* Green background */
-  color: #fff; /* White text */
-  padding: 17px 20px; /* Inner spacing */
-  font-size: 16px; /* Font size */
-  border: none; /* No border */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
-  width: auto; /* Ensure buttons are not stretched */
+  background-color: #27ae60;
+  /* Green background */
+  color: #fff;
+  /* White text */
+  padding: 17px 20px;
+  /* Inner spacing */
+  font-size: 16px;
+  /* Font size */
+  border: none;
+  /* No border */
+  border-radius: 4px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor */
+  transition: background-color 0.3s ease;
+  /* Smooth hover effect */
+  width: auto;
+  /* Ensure buttons are not stretched */
 }
 
 /* Hover Effect for Buttons */
 .checkout-btn:hover {
-  background-color: #2ecc71; /* Lighter green on hover */
+  background-color: #2ecc71;
+  /* Lighter green on hover */
 }
 
 @media (max-width: 768px) {
-  .header {
-    width: 700px;
-  }
 
-  .cart-profile-container {
-    position: relative;
-    right: 210px;
-  }
 
-  .header-center {
-    left: 50px;
-  }
 
-  .header-center input {
-    width: 100px;
-  }
+
 
   .container {
     width: 450px !important;
@@ -669,8 +352,10 @@ h3 {
 
 @media (max-width: 400px) {
   body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 100%; /* Ensure body width is 100% of the viewport */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    width: 100%;
+    /* Ensure body width is 100% of the viewport */
   }
 
   .main-content {
@@ -679,16 +364,7 @@ h3 {
     margin-top: 35px;
   }
 
-  .header {
-    position: relative;
-    top: 20px;
-    width: 90% !important;
-    overflow-x: hidden;
-  }
-
-  .header-center {
-    display: none;
-  }
+  
 
   .login {
     position: relative;
@@ -707,8 +383,4 @@ h3 {
     width: 360px !important;
   }
 
-  .sidebar-menu {
-    position: relative;
-    top: 100px !important;
-  }
 }

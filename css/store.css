@@ -15,119 +15,9 @@ h2,
 h3 {
   font-weight: 600;
   color: black;
-  margin-top: 60px;
+  margin: 0;
 }
 
-/* Sidebar Styling */
-.sidebar {
-  width: 200px;
-  background: linear-gradient(45deg, #2e8b57, #042d86);
-  color: white;
-  padding: 20px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0px; /* Initially hidden */
-  z-index: 10;
-  transition: left 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @media (max-width: 400px) {
-    width: 160px;
-  }
-}
-
-/* Sidebar when active */
-.sidebar.active {
-  left: 0; /* Slide in from the left */
-}
-
-/* Sidebar Logo */
-.sidebar-logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 20px;
-  margin-left: -20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Sidebar Menu Items */
-.sidebar-menu {
-  list-style: none;
-  padding: 0;
-  margin-top: -40px;
-  position: relative;
-  top: -150px;
-
-  @media (max-width: 400px) {
-    margin-top: 200px;
-  }
-}
-
-.sidebar-menu li {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 15px;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.sidebar-menu li i {
-  font-size: 1.4rem;
-}
-
-/* Hover and Active State */
-.sidebar-menu li:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateX(5px);
-}
-
-.sidebar-menu li:active {
-  background-color: rgba(255, 255, 255, 0.3);
-  transform: translateX(10px);
-}
-
-/* Sidebar Footer */
-.sidebar-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  position: relative;
-  top: -30px;
-  color: rgba(255, 255, 255, 0.8);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Smooth Toggle Button */
-.toggle-btn {
-  position: relative;
-  top: -5px;
-  margin-top: 25px;
-  margin-left: 50px;
-  z-index: 20;
-  font-size: 30px;
-  cursor: pointer;
-  border: none;
-  display: none;
-  color: white;
-  background-color: #1b5e20;
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.toggle-btn:hover {
-  background-color: #2e8b57;
-  transform: rotate(90deg);
-}
 
 /* Main Content Styles */
 .main-content {
@@ -162,74 +52,6 @@ h3 {
   width: 100%;
 }
 
-/* Notification Section */
-.notification {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.notification-icon {
-  font-size: 24px;
-  cursor: pointer;
-  color: black;
-  transition: color 0.3s;
-}
-
-.notification-icon:hover {
-  color: #2e8b57;
-}
-
-/* Notification Count */
-.notification-count {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 5px;
-  font-size: 14px;
-}
-
-.notification-dropdown {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  display: none; /* Ensure it's hidden initially */
-  max-height: 400px;
-  overflow-y: auto;
-  z-index: 100;
-}
-
-.notification-dropdown ul {
-  list-style-type: none;
-  padding: 15px;
-  margin: 0;
-}
-
-.notification-item {
-  padding: 10px;
-  border-bottom: 1px solid #f1f1f1;
-}
-
-.notification-item.unread {
-  background-color: #f9f9f9;
-  font-weight: bold;
-}
-
-.notification-item .notification-message {
-  display: block;
-}
-
-.notification-item .notification-time {
-  font-size: 12px;
-  color: #888;
-}
 
 .btn-login {
   background-color: #007bff;
@@ -247,150 +69,6 @@ h3 {
 /* Other styles for carousel, items, etc... */
 
 /* Main Content Section */
-
-/* Header Section */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 10px;
-
-  @media (max-width: 400px) {
-    margin-top: -20px;
-  }
-}
-.header input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-}
-.header-center {
-  position: relative;
-  left: 600px;
-}
-.header button {
-  padding: 10px;
-  background: linear-gradient(45deg, #2e8b57, #042d86);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.header button:hover {
-  background-color: #216c40;
-}
-
-/* Cart and Profile Section */
-.cart-profile-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  @media (max-width: 400px) {
-    position: relative;
-    right: 50px;
-  }
-}
-
-.cart {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.cart-icon {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.profile {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.profile-details {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.profile-pic {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: 2px solid #460eaf;
-  object-fit: cover;
-  transition: transform 0.2s;
-}
-
-.profile-pic:hover {
-  transform: scale(1.1);
-}
-
-.profile-name {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.profile-dropdown-icon {
-  font-size: 1rem;
-  color: #666;
-  transition: transform 0.3s;
-}
-
-.profile:hover .profile-dropdown-icon {
-  transform: rotate(180deg);
-}
-
-.dropdown {
-  position: absolute;
-  top: 55px;
-  right: 0;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 10px;
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  min-width: 150px;
-  z-index: 20;
-}
-
-.profile:hover .dropdown {
-  display: flex; /* Show dropdown on hover */
-}
-
-.dropdown a {
-  text-decoration: none;
-  color: #333;
-  font-size: 0.9rem;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.dropdown a i {
-  font-size: 1rem;
-}
-
-.dropdown a:hover {
-  background: linear-gradient(45deg, #2e8b57, #042d86);
-  color: #fff;
-}
 
 /* Headings */
 h1,
@@ -524,15 +202,7 @@ button:active {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .header-center {
-    position: relative;
-    left: 100px;
-  }
-
-  .cart-profile-container {
-    position: relative;
-    left: -30px;
-  }
+ 
 
   .items {
     grid-template-columns: repeat(3, 1fr);
@@ -542,21 +212,13 @@ button:active {
 }
 
 @media (max-width: 930px) {
-  .header-center {
-    position: relative;
-    left: 110px;
-  }
+
 }
 
 @media (max-width: 800px) {
-  .header-center {
-    position: relative;
-    left: 80px;
-  }
 
-  .header-center input {
-    width: 100px;
-  }
+
+ 
 
   .items {
     grid-template-columns: repeat(2, 1fr);
@@ -577,25 +239,10 @@ button:active {
 }
 
 @media (max-width: 700px) {
-  .header-center {
-    left: 20px;
-  }
+
 }
 
 @media (max-width: 640px) {
-  .header {
-    width: 500px;
-  }
-
-  .header-center {
-    position: relative;
-    left: 80px;
-    gap: 130px;
-  }
-
-  .header-center input {
-    width: 100px;
-  }
 
   .items {
     grid-template-columns: repeat(2, 1fr);
@@ -611,17 +258,6 @@ button:active {
 }
 
 @media (max-width: 490px) {
-  .notification-icon {
-    display: none !important;
-  }
-
-  .cart {
-    display: none !important;
-  }
-
-  .header {
-    width: 400px;
-  }
 
   .items {
     grid-template-columns: 1fr;
@@ -647,11 +283,7 @@ button:active {
     overflow-x: hidden;
   }
 
-  .header {
-    position: relative;
-    top: 20px;
-    header: 90%;
-  }
+
 }
 
 @media (max-width: 400px) {
@@ -665,21 +297,7 @@ button:active {
     overflow-x: hidden;
   }
 
-  .header {
-    position: relative;
-    top: 20px;
-    header: 90%;
-  }
-
-  .header-center {
-    position: relative;
-    left: 80px;
-    gap: 130px;
-  }
-
-  .header-center input {
-    width: 100px;
-  }
+  
 
   .items {
     max-width: 300px;
@@ -699,11 +317,6 @@ button:active {
     overflow-x: hidden;
   }
 
-  .header {
-    position: relative;
-    top: 20px;
-    header: 100%;
-  }
 
   .login {
     position: relative;
