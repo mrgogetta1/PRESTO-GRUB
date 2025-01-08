@@ -9,8 +9,8 @@ ini_set('display_errors', 1);
 // Check if the user is logged in
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
-    $username = $_SESSION['username'] ?? ''; 
-    $profile_picture = $_SESSION['profile_picture'] ?? 'default-profile.png'; 
+    $username = $_SESSION['username'] ?? '';
+    $profile_picture = $_SESSION['profile_picture'] ?? 'default-profile.png';
 } else {
     header("Location: login.php");
     exit();
@@ -57,9 +57,9 @@ if ($variant_result->num_rows > 0) {
 $user_details = [];
 $hasPurchased = false;
 if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id']; 
-    $user_query = "SELECT first_name, last_name, email, contact_no FROM users WHERE id = $user_id"; 
-    $user_result = $conn->query($user_query); 
+    $user_id = $_SESSION['user_id'];
+    $user_query = "SELECT first_name, last_name, email, contact_no FROM users WHERE id = $user_id";
+    $user_result = $conn->query($user_query);
 
     if ($user_result->num_rows > 0) {
         $user_details = $user_result->fetch_assoc();
@@ -157,18 +157,18 @@ if (isset($_POST['buy_now'])) {
     $variant_id = isset($_POST['variant_id']) ? (int)$_POST['variant_id'] : 0;
     $total_price = isset($_POST['total_price']) ? (float)$_POST['total_price'] : $product['price'];
 
-        // Fetch variant price if selected
-        if ($variant_id > 0) {
-            $variant_query = "SELECT price FROM product_variants WHERE variant_id = $variant_id";
-            $variant_result = $conn->query($variant_query);
-            if ($variant_result->num_rows > 0) {
-                $variant = $variant_result->fetch_assoc();
-                $total_price += $variant['price'];
-            }
+    // Fetch variant price if selected
+    if ($variant_id > 0) {
+        $variant_query = "SELECT price FROM product_variants WHERE variant_id = $variant_id";
+        $variant_result = $conn->query($variant_query);
+        if ($variant_result->num_rows > 0) {
+            $variant = $variant_result->fetch_assoc();
+            $total_price += $variant['price'];
         }
+    }
 
-        $total_price *= $quantity;
-        $payment_method = isset($_POST['payment_method']) ? mysqli_real_escape_string($conn, $_POST['payment_method']) : 'cash_on_delivery';
+    $total_price *= $quantity;
+    $payment_method = isset($_POST['payment_method']) ? mysqli_real_escape_string($conn, $_POST['payment_method']) : 'cash_on_delivery';
 
     // Insert into orders table
     $insert_order_query = "INSERT INTO orders (user_id, product_id, variant_id, quantity, total_price, payment_method, status, order_date) 
@@ -238,6 +238,7 @@ if (isset($_POST['submit_comment'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -246,427 +247,388 @@ if (isset($_POST['submit_comment'])) {
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="uploads/chef-hat.png" type="image/svg+xml">
     <link rel="stylesheet" href="css/view_product.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+
+
     <style>
         /* Hide the sidebar and show the toggle button when screen width <= 400px */
-@media (max-width: 400px) {
-  .sidebar {
-    left: -200px; /* Move sidebar out of view */
-  }
-
-  .toggle-btn {
-    display: block; /* Show toggle button */
-    position: fixed;
-    top: 10px;
-    font-size: 1.2rem;
-    left: -20px;
-    z-index: 15;
-  }
-
-  .main-content {
-    margin-left: 0; /* Remove margin when sidebar is hidden */
-  }
-
-  .main-content.shifted {
-    margin-left: 200px; /* Adjust when sidebar is visible */
-  }
-
-  .sidebar-menu li {
-    position: relative;
-    top: 40px;
-  }
-
-  .footer {
-    width: 100%;
-    padding: 0;
-    position: relative;
-    top: 50px !important;
-    margin-left: 100px !important;
-  }
-
-}
-
-.footer{
-    margin-top: 120px !important;
-}
-
-.about-company h3 {
-            font-size: 20px;
-            margin-top: 33px;
-            position: relative;
-            top: -20px !important;
-            color: white;
-            font-weight: 800;
-        }
-
-@media (max-width: 768px) {
-    .footer {
-        position: relative;
-        top: 200px;
-        width: 600px;
-        right: 100px;
-    }
-
-    
-}
-</style>
+    </style>
 </head>
+
 <body>
-<?php include 'sidebar.php'; ?>
+    <?php include 'sidebar.php'; ?>
 
-<!-- Main Content -->
-<div class="main-content">
-    <div class="header">
-        <div class="header-center">
-            <form class="searchb" action="order_status.php" method="GET">
-                <input type="text" name="search" placeholder="Search" value="<?php echo htmlspecialchars($search_query); ?>">
-                <button type="submit">Search</button>
-            </form>
-        </div>
-        <div class="cart-profile-container">
-            <div class="notification-icon">
-                <i class="fa fa-bell"></i>  
-            </div>
-            <div class="cart">
-                <i class="fas fa-shopping-cart cart-icon"></i>
-            </div>
-
-            <!-- Profile Dropdown -->
-            <?php if (isset($_SESSION['user_id'])): ?>
-            <div class="profile">
-                <div class="profile-details">
-                    <img src="img/<?php echo htmlspecialchars($profile_picture); ?>" alt="Profile Picture" class="profile-pic">
-                    <span class="profile-name"><?php echo htmlspecialchars($username); ?></span>
-                    <i class="fas fa-chevron-down profile-dropdown-icon"></i>
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="header-center">
+                <div class="search-form">
+                    <form action="index.php" method="GET">
+                        <input type="text" name="search" placeholder="Search">
+                        <button type="submit">Search</button>
+                    </form>
                 </div>
-                <div class="dropdown">
-                    <!-- <a href="profile.php"><i class="fas fa-user"></i> My Profile</a> -->
-                    <a href="account.php"><i class="fas fa-cog"></i> Settings</a>
-                    <a href="function/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <button class="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="cart-profile-container" id="cart-profile-container">
+                <div class="notification-icon">
+                    <i class="fa fa-bell"></i>
                 </div>
-            </div>  
-            <?php else: ?>
-            <div class="login">
-                <a href="login.php" class="btn-login">Login</a>
-            </div>
-            <?php endif; ?>
-        </div>
-    </div>
-
-<div class="container">
-    <div class="product-container">
-        <div class="product-details">
-            <div class="product-image">
-                <?php if (!empty($product['image'])): ?> 
-                    <img src="productimg/<?php echo htmlspecialchars($product['image']); ?>" alt="Product Image" />
-                <?php else: ?> 
-                    <img src="default-image.jpg" alt="No Image Available" />
-                <?php endif; ?>
-            </div>
-
-            <div class="product-info">
-                <h2><?php echo htmlspecialchars($product['name']); ?></h2>
-                <p class="product-description"><?php echo htmlspecialchars($product['description']); ?></p>
-                <div class="price-info">
-                    <p class="price">₱<?php echo htmlspecialchars($product['price']); ?></p>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
                 </div>
 
-                <h3>Choose Variants</h3>
-
-<form id="variant-form" method="POST">
-    <?php
-    // Fetch variants for this product
-    $variant_query = "SELECT * FROM product_variants WHERE product_id = $product_id";
-    $variant_result = $conn->query($variant_query);
-
-    $variants = [];
-    while ($variant = $variant_result->fetch_assoc()) {
-        $variants[$variant['variant_name']][] = $variant;
-    }
-
-    // Display each variant group (e.g. Flavor, Size)
-    foreach ($variants as $variant_name => $variant_group) {
-        // Sanitize variant name for use in HTML attribute
-        $sanitized_variant_name = preg_replace('/[^a-zA-Z0-9_]/', '_', $variant_name);
-        
-        echo "<div class='variant-group'>";
-        echo "<h4>$variant_name</h4>";
-
-        // Display SKU radio buttons for each variant name (radio button behavior for one selection)
-        foreach ($variant_group as $variant) {
-            $sku = htmlspecialchars($variant['sku']);
-            $price = number_format($variant['price'], 2);
-            echo "<div class='variant-option'>";
-            echo "<input type='radio' name='variant_{$sanitized_variant_name}' class='variant-radio' 
-                data-price='$price' data-variant-id='" . $variant['variant_id'] . "' 
-                id='sku_" . $variant['variant_id'] . "' value='" . $variant['variant_id'] . "' />"; 
-            echo "<label for='sku_" . $variant['variant_id'] . "'>";
-            echo "$sku (₱$price)";
-            echo "</label>";
-            echo "</div>";
-        }
-
-        echo "</div>";
-    }
-    ?>
-</form>
-
+                <!-- Profile Dropdown -->
                 <?php if (isset($_SESSION['user_id'])): ?>
-                    <div class="quantity-controls">
-                        <label for="quantity">Quantity:</label>
-                        <div class="quantity-buttons">
-                            <button type="button" onclick="decreaseQuantity()">-</button>
-                            <input type="number" id="quantity" name="quantity" value="1" min="1" readonly>
-                            <button type="button" onclick="increaseQuantity()">+</button>
+                    <div class="profile">
+                        <div class="profile-details">
+                            <img src="img/<?php echo htmlspecialchars($profile_picture); ?>" alt="Profile Picture" class="profile-pic">
+                            <span class="profile-name"><?php echo htmlspecialchars($username); ?></span>
+                            <i class="fas fa-chevron-down profile-dropdown-icon"></i>
+                        </div>
+                        <div class="dropdown">
+                            <!-- <a href="profile.php"><i class="fas fa-user"></i> My Profile</a> -->
+                            <a href="account.php"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="function/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                         </div>
                     </div>
-                    <p class="total-quan">Total Quantity Price: <span id="totalPrice">₱<?php echo $product['price']; ?></span></p>
-
-                    <!-- Add to Cart Button -->
-                    <form method="POST" class="add-to-cart-form">
-                        <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-                        <input type="hidden" name="variant_id" value="" id="selected-variant-id" /> <!-- Default is empty -->
-                        <input type="hidden" name="quantity" value="1" id="quantity-input" />
-                        <button class="btn add-to-cart" name="add_to_cart" type="submit">Add to Cart</button>
-                    </form>
-
-
-                    <!-- Updated Buy Now Button -->
-                    <!-- Updated Buy Now Button -->
-                    <form method="POST" action="delivery_form.php">
-                        <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-                        <input type="hidden" name="variant_id" value="0" id="selected-variant-id-buy-now" />
-                        <input type="hidden" name="quantity" value="1" id="quantity-input-buy-now" />
-                        <input type="hidden" name="payment_method" value="cash_on_delivery" />
-                        <button class="btn buy-now" name="buy_now" type="submit">Buy Now</button>
-                    </form>
-
-
-
-
                 <?php else: ?>
-                    <p class="login-prompt">Please log in to purchase.</p>
+                    <div class="login">
+                        <a href="login.php" class="btn-login">Login</a>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>
-    </div>
 
-    <div class="user-comments">
-        <h3>Customer Comments</h3>
-        <?php
-            $comment_query = "SELECT * FROM product_comments WHERE product_id = $product_id ORDER BY date_posted DESC";
-            $comments_result = $conn->query($comment_query);
-
-            while ($comment = $comments_result->fetch_assoc()) {
-                echo '<div class="comment">';
-                echo '<div class="comment-header">';
-                echo '<strong>' . htmlspecialchars($comment['username']) . '</strong>';
-                echo '<span class="comment-date">' . htmlspecialchars($comment['date_posted']) . '</span>';
-                echo '</div>';
-                echo '<div class="comment-rating">Rating: ' . str_repeat('★', $comment['rating']) . '</div>';
-                echo '<p>' . htmlspecialchars($comment['comment']) . '</p>';
-                echo '</div>';
-            }
-        ?>
-        <div class="user-rate">
-            <?php if (isset($_SESSION['user_id'])): ?>
-                <form method="POST" class="comment-form">
-                    <textarea name="comment" placeholder="Add your comment here..." required></textarea>
-                    <h3>Customer Rate</h3>
-                    <label for="rating">Rating:</label>
-                    <div class="rating-stars">
-                        <input type="hidden" id="rating-value" name="rating" value="5" required>
-                        <div class="stars" id="star-container">
-                            <i class="fa fa-star" data-value="1"></i>
-                            <i class="fa fa-star" data-value="2"></i>
-                            <i class="fa fa-star" data-value="3"></i>
-                            <i class="fa fa-star" data-value="4"></i>
-                            <i class="fa fa-star" data-value="5"></i>
-                        </div>
+        <div class="container">
+            <div class="product-container">
+                <div class="product-details">
+                    <div class="product-image">
+                        <?php if (!empty($product['image'])): ?>
+                            <img src="productimg/<?php echo htmlspecialchars($product['image']); ?>" alt="Product Image" />
+                        <?php else: ?>
+                            <img src="default-image.jpg" alt="No Image Available" />
+                        <?php endif; ?>
                     </div>
-                    <button type="submit" name="submit_comment" class="btn submit-comment">Submit Comment</button>
-                </form>
-            <?php else: ?>
-                <p class="login-prompt">Please log in to leave a comment.</p>
-            <?php endif; ?>
+
+                    <div class="product-info">
+                        <h2><?php echo htmlspecialchars($product['name']); ?></h2>
+                        <p class="product-description"><?php echo htmlspecialchars($product['description']); ?></p>
+                        <div class="price-info">
+                            <p class="price">₱<?php echo htmlspecialchars($product['price']); ?></p>
+                        </div>
+
+                        <h3>Choose Variants</h3>
+
+                        <form id="variant-form" method="POST">
+                            <?php
+                            // Fetch variants for this product
+                            $variant_query = "SELECT * FROM product_variants WHERE product_id = $product_id";
+                            $variant_result = $conn->query($variant_query);
+
+                            $variants = [];
+                            while ($variant = $variant_result->fetch_assoc()) {
+                                $variants[$variant['variant_name']][] = $variant;
+                            }
+
+                            // Display each variant group (e.g. Flavor, Size)
+                            foreach ($variants as $variant_name => $variant_group) {
+                                // Sanitize variant name for use in HTML attribute
+                                $sanitized_variant_name = preg_replace('/[^a-zA-Z0-9_]/', '_', $variant_name);
+
+                                echo "<div class='variant-group'>";
+                                echo "<h4>$variant_name</h4>";
+
+                                // Display SKU radio buttons for each variant name (radio button behavior for one selection)
+                                foreach ($variant_group as $variant) {
+                                    $sku = htmlspecialchars($variant['sku']);
+                                    $price = number_format($variant['price'], 2);
+                                    echo "<div class='variant-option'>";
+                                    echo "<input type='radio' name='variant_{$sanitized_variant_name}' class='variant-radio' 
+                data-price='$price' data-variant-id='" . $variant['variant_id'] . "' 
+                id='sku_" . $variant['variant_id'] . "' value='" . $variant['variant_id'] . "' />";
+                                    echo "<label for='sku_" . $variant['variant_id'] . "'>";
+                                    echo "$sku (₱$price)";
+                                    echo "</label>";
+                                    echo "</div>";
+                                }
+
+                                echo "</div>";
+                            }
+                            ?>
+                        </form>
+
+                        <?php if (isset($_SESSION['user_id'])): ?>
+                            <div class="quantity-controls">
+                                <label for="quantity">Quantity:</label>
+                                <div class="quantity-buttons">
+                                    <button type="button" onclick="decreaseQuantity()">-</button>
+                                    <input type="number" id="quantity" name="quantity" value="1" min="1" readonly>
+                                    <button type="button" onclick="increaseQuantity()">+</button>
+                                </div>
+                            </div>
+                            <p class="total-quan">Total Quantity Price: <span id="totalPrice">₱<?php echo $product['price']; ?></span></p>
+
+                            <!-- Add to Cart Button -->
+                            <form method="POST" class="add-to-cart-form">
+                                <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
+                                <input type="hidden" name="variant_id" value="" id="selected-variant-id" /> <!-- Default is empty -->
+                                <input type="hidden" name="quantity" value="1" id="quantity-input" />
+                                <button class="btn add-to-cart" name="add_to_cart" type="submit">Add to Cart</button>
+                            </form>
+
+
+                            <!-- Updated Buy Now Button -->
+                            <!-- Updated Buy Now Button -->
+                            <form method="POST" action="delivery_form.php">
+                                <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
+                                <input type="hidden" name="variant_id" value="0" id="selected-variant-id-buy-now" />
+                                <input type="hidden" name="quantity" value="1" id="quantity-input-buy-now" />
+                                <input type="hidden" name="payment_method" value="cash_on_delivery" />
+                                <button class="btn buy-now" name="buy_now" type="submit">Buy Now</button>
+                            </form>
+
+
+
+
+                        <?php else: ?>
+                            <p class="login-prompt">Please log in to purchase.</p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-comments">
+                <h3>Customer Comments</h3>
+                <?php
+                $comment_query = "SELECT * FROM product_comments WHERE product_id = $product_id ORDER BY date_posted DESC";
+                $comments_result = $conn->query($comment_query);
+
+                while ($comment = $comments_result->fetch_assoc()) {
+                    echo '<div class="comment">';
+                    echo '<div class="comment-header">';
+                    echo '<strong>' . htmlspecialchars($comment['username']) . '</strong>';
+                    echo '<span class="comment-date">' . htmlspecialchars($comment['date_posted']) . '</span>';
+                    echo '</div>';
+                    echo '<div class="comment-rating">Rating: ' . str_repeat('★', $comment['rating']) . '</div>';
+                    echo '<p>' . htmlspecialchars($comment['comment']) . '</p>';
+                    echo '</div>';
+                }
+                ?>
+                <div class="user-rate">
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                        <form method="POST" class="comment-form">
+                            <textarea name="comment" placeholder="Add your comment here..." required></textarea>
+                            <h3>Customer Rate</h3>
+                            <label for="rating">Rating:</label>
+                            <div class="rating-stars">
+                                <input type="hidden" id="rating-value" name="rating" value="5" required>
+                                <div class="stars" id="star-container">
+                                    <i class="fa fa-star" data-value="1"></i>
+                                    <i class="fa fa-star" data-value="2"></i>
+                                    <i class="fa fa-star" data-value="3"></i>
+                                    <i class="fa fa-star" data-value="4"></i>
+                                    <i class="fa fa-star" data-value="5"></i>
+                                </div>
+                            </div>
+                            <button type="submit" name="submit_comment" class="btn submit-comment">Submit Comment</button>
+                        </form>
+                    <?php else: ?>
+                        <p class="login-prompt">Please log in to leave a comment.</p>
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-    <!-- Footer -->
-    <?php include 'footer.php'; ?>
+        <!-- Footer -->
+        <?php include 'footer.php'; ?>
 
 
-<script src="js/view_product.js"></script>
+        <script src="js/view_product.js"></script>
 
-<script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const searchBtn = document.querySelector('.search-btn');
+                const searchForm = document.querySelector('.search-form');
+                const cartprofile = document.querySelector('#cart-profile-container');
+
+                searchBtn.addEventListener('click', function() {
+                    searchForm.classList.toggle('active');
+                    cartprofile.classList.toggle('hide');
+                    this.classList.toggle('active');
+                    this.innerHTML = this.classList.contains('active') ? '<i class="fa fa-times"></i>' : '<i class="fa fa-search"></i>';
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const toggleBtn = document.getElementById('toggle-btn');
+                const sidebar = document.getElementById('sidebar');
+                const mainContent = document.querySelector('.main-content');
+
+                toggleBtn.addEventListener('click', function() {
+                    sidebar.classList.toggle('active');
+                    mainContent.classList.toggle('shifted');
+                });
+            });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const toggleBtn = document.getElementById('toggle-btn');
-  const sidebar = document.getElementById('sidebar');
-  const mainContent = document.querySelector('.main-content');
+            document.addEventListener("DOMContentLoaded", function() {
+                const stars = document.querySelectorAll("#star-container i");
+                const ratingValue = document.getElementById("rating-value");
 
-  toggleBtn.addEventListener('click', function () {
-    sidebar.classList.toggle('active');
-    mainContent.classList.toggle('shifted');
-  });
-});
+                stars.forEach((star) => {
+                    // Highlight stars on hover
+                    star.addEventListener("mouseover", () => {
+                        const value = star.getAttribute("data-value");
+                        highlightStars(value);
+                    });
 
+                    // Reset stars when not hovering
+                    star.addEventListener("mouseout", () => {
+                        highlightStars(ratingValue.value); // Show current rating
+                    });
 
-    document.addEventListener("DOMContentLoaded", function () {
-    const stars = document.querySelectorAll("#star-container i");
-    const ratingValue = document.getElementById("rating-value");
+                    // Update the rating value on click
+                    star.addEventListener("click", () => {
+                        const value = star.getAttribute("data-value");
+                        ratingValue.value = value;
+                        highlightStars(value);
+                    });
+                });
 
-    stars.forEach((star) => {
-        // Highlight stars on hover
-        star.addEventListener("mouseover", () => {
-            const value = star.getAttribute("data-value");
-            highlightStars(value);
-        });
+                // Function to highlight stars up to a specific value
+                function highlightStars(value) {
+                    stars.forEach((star) => {
+                        const starValue = star.getAttribute("data-value");
+                        star.classList.toggle("active", starValue <= value);
+                    });
+                }
 
-        // Reset stars when not hovering
-        star.addEventListener("mouseout", () => {
-            highlightStars(ratingValue.value); // Show current rating
-        });
+                // Initialize stars with default rating value
+                highlightStars(ratingValue.value);
+            });
+            // JS for Quantity Controls
+            function increaseQuantity() {
+                var quantityInput = document.getElementById('quantity');
+                quantityInput.value = parseInt(quantityInput.value) + 0;
+                updateTotalPrice();
+            }
 
-        // Update the rating value on click
-        star.addEventListener("click", () => {
-            const value = star.getAttribute("data-value");
-            ratingValue.value = value;
-            highlightStars(value);
-        });
-    });
+            function decreaseQuantity() {
+                var quantityInput = document.getElementById('quantity');
+                if (parseInt(quantityInput.value) > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 0;
+                    updateTotalPrice();
+                }
+            }
 
-    // Function to highlight stars up to a specific value
-    function highlightStars(value) {
-        stars.forEach((star) => {
-            const starValue = star.getAttribute("data-value");
-            star.classList.toggle("active", starValue <= value);
-        });
-    }
+            // Function to update the total price based on selected variant and quantity
+            function updateTotalPrice() {
+                var selectedVariantPrice = 0;
+                var quantity = document.getElementById('quantity').value;
 
-    // Initialize stars with default rating value
-    highlightStars(ratingValue.value);
-});
-// JS for Quantity Controls
-function increaseQuantity() {
-        var quantityInput = document.getElementById('quantity');
-        quantityInput.value = parseInt(quantityInput.value) + 0;
-        updateTotalPrice();
-    }
+                // Find selected variants (one SKU per variant_name)
+                var selectedVariants = document.querySelectorAll('.variant-radio:checked');
+                selectedVariants.forEach(function(checkbox) {
+                    selectedVariantPrice += parseFloat(checkbox.getAttribute('data-price'));
+                });
 
-    function decreaseQuantity() {
-        var quantityInput = document.getElementById('quantity');
-        if (parseInt(quantityInput.value) > 1) {
-            quantityInput.value = parseInt(quantityInput.value) - 0;
-            updateTotalPrice();
-        }
-    }
+                var basePrice = <?php echo $product['price']; ?>; // Base product price
+                var totalPrice = (basePrice + selectedVariantPrice) * quantity;
 
-    // Function to update the total price based on selected variant and quantity
-    function updateTotalPrice() {
-        var selectedVariantPrice = 0;
-        var quantity = document.getElementById('quantity').value;
+                // Update the total price on the page
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            }
 
-        // Find selected variants (one SKU per variant_name)
-        var selectedVariants = document.querySelectorAll('.variant-radio:checked');
-        selectedVariants.forEach(function(checkbox) {
-            selectedVariantPrice += parseFloat(checkbox.getAttribute('data-price'));
-        });
+            // Add event listener to radio buttons to update price when selected
+            var radios = document.querySelectorAll('.variant-radio');
+            radios.forEach(function(radio) {
+                radio.addEventListener('change', function() {
+                    updateTotalPrice();
+                    updateVariantId(radio);
+                });
+            });
 
-        var basePrice = <?php echo $product['price']; ?>; // Base product price
-        var totalPrice = (basePrice + selectedVariantPrice) * quantity;
+            // Function to update the hidden variant_id input based on selected variant
+            function updateVariantId(radio) {
+                var selectedVariantId = radio.getAttribute('data-variant-id');
 
-        // Update the total price on the page
-        document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
-    }
+                // If the radio button is checked, update the corresponding hidden input
+                document.getElementById('selected-variant-id').value = selectedVariantId;
+                document.getElementById('selected-variant-id-buy-now').value = selectedVariantId;
+            }
 
-    // Add event listener to radio buttons to update price when selected
-    var radios = document.querySelectorAll('.variant-radio');
-    radios.forEach(function(radio) {
-        radio.addEventListener('change', function() {
-            updateTotalPrice();
-            updateVariantId(radio);
-        });
-    });
+            // Ensure variant_id is updated if a variant is preselected (in case of page reload or default selection)
+            document.addEventListener('DOMContentLoaded', function() {
+                // Quantity Control
+                const quantityInput = document.getElementById('quantity');
+                const quantityInputBuyNow = document.getElementById('quantity-input-buy-now');
+                const quantityInputAddToCart = document.getElementById('quantity-input');
 
-    // Function to update the hidden variant_id input based on selected variant
-    function updateVariantId(radio) {
-        var selectedVariantId = radio.getAttribute('data-variant-id');
+                // Function to increase the quantity
+                function increaseQuantity() {
+                    let quantity = parseInt(quantityInput.value);
+                    quantityInput.value = quantity + 1;
+                    quantityInputBuyNow.value = quantity + 1;
+                    quantityInputAddToCart.value = quantity + 1;
+                    updateTotalPrice();
+                }
 
-        // If the radio button is checked, update the corresponding hidden input
-        document.getElementById('selected-variant-id').value = selectedVariantId;
-        document.getElementById('selected-variant-id-buy-now').value = selectedVariantId;
-    }
+                // Function to decrease the quantity
+                function decreaseQuantity() {
+                    let quantity = parseInt(quantityInput.value);
+                    if (quantity > 1) {
+                        quantityInput.value = quantity - 1;
+                        quantityInputBuyNow.value = quantity - 1;
+                        quantityInputAddToCart.value = quantity - 1;
+                        updateTotalPrice();
+                    }
+                }
 
-    // Ensure variant_id is updated if a variant is preselected (in case of page reload or default selection)
-    document.addEventListener('DOMContentLoaded', function() {
-    // Quantity Control
-    const quantityInput = document.getElementById('quantity');
-    const quantityInputBuyNow = document.getElementById('quantity-input-buy-now');
-    const quantityInputAddToCart = document.getElementById('quantity-input');
-    
-    // Function to increase the quantity
-    function increaseQuantity() {
-        let quantity = parseInt(quantityInput.value);
-        quantityInput.value = quantity + 1;
-        quantityInputBuyNow.value = quantity + 1;
-        quantityInputAddToCart.value = quantity + 1;
-        updateTotalPrice();
-    }
+                // Add event listeners for the quantity buttons
+                document.querySelector('button[onclick="increaseQuantity()"]').addEventListener('click', increaseQuantity);
+                document.querySelector('button[onclick="decreaseQuantity()"]').addEventListener('click', decreaseQuantity);
 
-    // Function to decrease the quantity
-    function decreaseQuantity() {
-        let quantity = parseInt(quantityInput.value);
-        if (quantity > 1) {
-            quantityInput.value = quantity - 1;
-            quantityInputBuyNow.value = quantity - 1;
-            quantityInputAddToCart.value = quantity - 1;
-            updateTotalPrice();
-        }
-    }
+                // Variant selection event listener (for radio buttons)
+                const variantRadios = document.querySelectorAll('.variant-radio');
 
-    // Add event listeners for the quantity buttons
-    document.querySelector('button[onclick="increaseQuantity()"]').addEventListener('click', increaseQuantity);
-    document.querySelector('button[onclick="decreaseQuantity()"]').addEventListener('click', decreaseQuantity);
+                variantRadios.forEach(function(radio) {
+                    radio.addEventListener('change', function() {
+                        const selectedVariantId = radio.getAttribute('data-variant-id');
+                        const selectedVariantPrice = radio.getAttribute('data-price');
 
-    // Variant selection event listener (for radio buttons)
-    const variantRadios = document.querySelectorAll('.variant-radio');
-    
-    variantRadios.forEach(function(radio) {
-        radio.addEventListener('change', function() {
-            const selectedVariantId = radio.getAttribute('data-variant-id');
-            const selectedVariantPrice = radio.getAttribute('data-price');
-            
-            // Update the hidden input with selected variant ID
-            document.getElementById('selected-variant-id').value = selectedVariantId;
-            document.getElementById('selected-variant-id-buy-now').value = selectedVariantId;
+                        // Update the hidden input with selected variant ID
+                        document.getElementById('selected-variant-id').value = selectedVariantId;
+                        document.getElementById('selected-variant-id-buy-now').value = selectedVariantId;
 
-            // Update total price
-            updateTotalPrice();
-        });
-    });
+                        // Update total price
+                        updateTotalPrice();
+                    });
+                });
 
-    // Function to update the total price based on selected variant and quantity
-    function updateTotalPrice() {
-        let selectedVariantPrice = 0;
-        const quantity = parseInt(quantityInput.value);
+                // Function to update the total price based on selected variant and quantity
+                function updateTotalPrice() {
+                    let selectedVariantPrice = 0;
+                    const quantity = parseInt(quantityInput.value);
 
-        const selectedVariantId = document.getElementById('selected-variant-id').value;
-        if (selectedVariantId) {
-            selectedVariantPrice = parseFloat(document.querySelector(`input[data-variant-id="${selectedVariantId}"]`).getAttribute('data-price'));
-        }
+                    const selectedVariantId = document.getElementById('selected-variant-id').value;
+                    if (selectedVariantId) {
+                        selectedVariantPrice = parseFloat(document.querySelector(`input[data-variant-id="${selectedVariantId}"]`).getAttribute('data-price'));
+                    }
 
-        const basePrice = <?php echo $product['price']; ?>; // Base product price from PHP
-        const totalPrice = (basePrice + selectedVariantPrice) * quantity;
+                    const basePrice = <?php echo $product['price']; ?>; // Base product price from PHP
+                    const totalPrice = (basePrice + selectedVariantPrice) * quantity;
 
-        // Update total price on page
-        document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
-    }
+                    // Update total price on page
+                    document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+                }
 
-    // Ensure total price is updated on page load
-    updateTotalPrice();
-});
-</script>
+                // Ensure total price is updated on page load
+                updateTotalPrice();
+            });
+        </script>
 </body>
+
 </html>

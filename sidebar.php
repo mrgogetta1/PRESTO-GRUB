@@ -232,7 +232,7 @@
   }
 
 
-  @media (max-width: 450px) {
+  @media (max-width: 650px) {
 
     .sidebar {
       left: -250px;
