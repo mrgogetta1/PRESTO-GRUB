@@ -180,10 +180,6 @@ $unreadCountQuery->close();
                 <div class="notification-icon">
                     <i class="fa fa-bell"></i>
                 </div>
-                <div class="cart">
-                    <i class="fas fa-shopping-cart cart-icon"></i>
-                </div>
-
                 <!-- Profile Dropdown -->
                 <?php if (isset($_SESSION['username'])): ?>
                     <div class="profile">

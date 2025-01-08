@@ -283,11 +283,6 @@ if (!empty($search)) {
                             <?php endwhile; ?>
                         </ul>
                     </div>
-
-                    <!-- Cart Icon -->
-                    <div class="cart">
-                        <i class="fas fa-shopping-cart cart-icon"></i>
-                    </div>
                 <?php endif; ?>
 
                 <!-- Profile Dropdown -->

@@ -67,7 +67,6 @@ h3 {
   align-items: center;
 }
 
-
 .btn-login {
   background-color: #007bff;
   color: #fff;
@@ -197,16 +196,16 @@ h3 {
     width: 100%;
     height: auto;
   }
-  
+
   .carousel-container {
     flex-direction: column;
   }
-  
+
   .carousel-side-image {
     width: 100%;
     height: auto;
   }
-  
+
   .carousel-images img {
     width: 100%;
     height: auto;
@@ -323,7 +322,6 @@ h3 {
   justify-content: center;
 }
 
-
 /* Product Card */
 .product-card {
   width: 300px;
@@ -333,11 +331,11 @@ h3 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .product-card.reco-item {
     height: fit-content;
   }
-  .product-card.reco-item .product-card{  
+  .product-card.reco-item .product-card {
     width: 90%;
     height: 90%;
     min-width: 200px;
@@ -592,7 +590,6 @@ h3 {
   padding: 0 25px;
 }
 
-
 .order-card {
   background: #fff; /* White background */
   border-radius: 12px; /* Smooth rounded corners */
@@ -673,7 +670,6 @@ h3 {
 
 /* Hide the sidebar and show the toggle button when screen width <= 400px */
 @media (max-width: 400px) {
-
   .menu-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -682,7 +678,6 @@ h3 {
   }
 
   .menu-card {
-    background-color: #e6f6f0;
     border: 1px solid #ddd;
     border-radius: 10px;
     width: 100px;
@@ -702,6 +697,7 @@ h3 {
     padding: 0 25px;
   }
 }
+
 /* Container for Product Cards */
 .order-items {
   display: flex;
@@ -720,8 +716,9 @@ h3 {
   text-align: center;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-@media (max-width:1024px) {
-  .order-items.menu-cat, .store-items{
+@media (max-width: 1024px) {
+  .order-items.menu-cat,
+  .store-items {
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow: hidden;
@@ -729,12 +726,13 @@ h3 {
     flex-direction: row;
     justify-content: space-evenly !important;
   }
-  .menu-cat .product-card,.store-card{
+  .menu-cat .product-card,
+  .store-card {
     min-width: 280px;
     min-height: 200px;
     max-height: fit-content;
   }
-} 
+}
 .product-card:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
@@ -989,11 +987,7 @@ a {
   }
 }
 
-
-
 @media (max-width: 835px) {
- 
-
   .menu-header h2 {
     position: relative;
     text-align: center !important;
@@ -1033,8 +1027,6 @@ a {
   }
 }
 
-
-
 @media (max-width: 400px) {
   .login {
     position: relative;
@@ -1042,8 +1034,6 @@ a {
     margin-top: 30px;
     margin-bottom: 10px;
   }
-
-
 }
 
 @media (max-width: 320px) {
