@@ -289,7 +289,7 @@ h1 {
 }
 .product-container {
   max-width: 500px;
-  min-width: 400px;
+  min-width: 500px;
   margin: 20px auto;
   padding: 20px;
   position: relative;
@@ -306,7 +306,7 @@ h1 {
     right: -1px;
     gap: 10px;
     padding: 5px;
-    height: 690px;
+    height: auto;
     left: -1px;
   }
 }
@@ -342,7 +342,9 @@ h1 {
   @media (max-width: 400px) {
     margin-top: 10px;
     margin-left: 50px;
-    width: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -354,7 +356,7 @@ h1 {
   @media (max-width: 400px) {
     font-size: 1.1rem;
     font-weight: 100;
-    margin-left: 60px;
+    /* margin-left: 60px; */
   }
 }
 
@@ -371,7 +373,7 @@ h1 {
   @media (max-width: 400px) {
     font-size: 0.8rem;
     text-align: center;
-    margin-left: 60px;
+    /* margin-left: 60px; */
     margin-top: -20px;
   }
 }
@@ -383,7 +385,7 @@ h1 {
   @media (max-width: 400px) {
     display: flex;
     flex-direction: column;
-    margin-left: 60px;
+    /* margin-left: 60px; */
   }
 }
 
@@ -409,14 +411,14 @@ h1 {
 .variant-group h4 {
   @media (max-width: 400px) {
     position: relative;
-    left: 80px;
+    /* left: 80px; */
   }
 }
 
 .variant-option {
   @media (max-width: 400px) {
     position: relative;
-    left: 45px;
+    /* left: 45px; */
   }
 }
 
@@ -432,14 +434,14 @@ h1 {
   @media (max-width: 400px) {
     font-size: 1.3rem;
     top: 5px;
-    left: 30px;
+    /* left: 30px; */
   }
 }
 
 .product-info h3 {
   @media (max-width: 400px) {
     position: relative;
-    left: 35px;
+    /* left: 35px; */
   }
 }
 
@@ -451,7 +453,7 @@ h1 {
 
   @media (max-width: 400px) {
     position: relative;
-    right: 25px;
+    /* right: 25px; */
     top: 5px;
   }
 }
@@ -461,7 +463,7 @@ h1 {
   gap: 10px;
 
   @media (max-width: 400px) {
-    margin-right: 100px;
+    /* margin-right: 100px; */
   }
 }
 
@@ -494,7 +496,7 @@ h1 {
 
   @media (max-width: 400px) {
     display: flex;
-    margin: 10px 0;
+    /* margin: 10px 0; */
     flex-direction: column;
   }
 }
@@ -516,7 +518,7 @@ h1 {
   @media (max-width: 400px) {
     padding: 2px;
     width: 70px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
 }
 
@@ -752,8 +754,8 @@ p {
   border: 1px solid #ccc; /* Optional: To make the section visually distinct */
   background-color: #fff; /* Optional: To ensure readability */
   /* Adjust the right distance */
-
-  max-width: 500px;
+  min-width: 500px;
+ 
   background-color: #f9f9f9;
   border-radius: 8px;
   padding: 20px;
