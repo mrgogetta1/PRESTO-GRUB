@@ -82,7 +82,7 @@ $storesResult = $storeQuery->get_result();
         <?php while ($store = $storesResult->fetch_assoc()): ?>
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="http://localhost/phpprogram/2/store_images/<?php echo htmlspecialchars($store['store_image']); ?>" alt="Store Image" class="card-img-top img-fluid" style="max-height: 200px; object-fit: cover;">
+                    <img src="http://localhost/phpprogram/presto folder/presto-grub/uploads/<?php echo htmlspecialchars($store['store_image']); ?>" alt="Store Image" class="card-img-top img-fluid" style="max-height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo htmlspecialchars($store['store_name']); ?></h5>
                         <p class="card-text"><?php echo htmlspecialchars($store['store_description']); ?></p>
