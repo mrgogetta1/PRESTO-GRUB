@@ -97,14 +97,13 @@ $storeResult = $storeQuery->get_result();
             <?php while ($product = $productResult->fetch_assoc()): ?>
                 <div class="col-md-4 mb-4">
     <div class="card position-relative">
-        <!-- X Button for Deleting Product -->
-        <button class="btn btn-danger btn-sm position-absolute" style="top: 5px; right: 5px;" 
-                onclick="confirmDeleteProduct(<?php echo $product['product_id']; ?>)">
-            &times;
-        </button>
-
+       <!-- X Button for Deleting Product -->
+<button class="btn btn-danger btn-sm position-absolute" style="top: 5px; right: 5px;" 
+        onclick="confirmDeleteProduct(<?php echo $product['product_id']; ?>)">
+    &times;
+</button>
         <!-- Product Image -->
-        <img src="http://localhost/phpprogram/4/productimg/<?php echo htmlspecialchars($product['image']); ?>" 
+        <img src="http://localhost/phpprogram/presto folder/presto-grub/uploads/<?php echo htmlspecialchars($product['image']); ?>" 
              alt="Product Image" class="card-img-top img-fluid" style="max-height: 200px; object-fit: cover;">
 
         <div class="card-body">
@@ -122,26 +121,48 @@ $storeResult = $storeQuery->get_result();
                 </select>
             </div>
 
-            <!-- Variants List -->
-            <div class="form-group">
-                <label for="product_variants_<?php echo $product['product_id']; ?>">Product Variants</label>
-                <ul class="list-group">
-    <?php
-    $variantQuery = $conn->prepare("SELECT * FROM product_variants WHERE product_id = ?");
-    $variantQuery->bind_param("i", $product['product_id']);
-    $variantQuery->execute();
-    $variantResult = $variantQuery->get_result();
 
-    while ($variant = $variantResult->fetch_assoc()) {
-        echo "<li class='list-group-item'>"
-            . htmlspecialchars($variant['variant_name']) . " - SKU: "
-            . htmlspecialchars($variant['sku']) . " - Price: $"
-            . number_format($variant['price'], 2) . " - Stock: "
-            . htmlspecialchars($variant['stock_quantity']) . "</li>";
+<!-- VARIANT FUNCTIONALITY -->
+
+<?php
+if (!function_exists('remove_variant')) {
+    function remove_variant($variant_id, $conn) {
+        $stmt = $conn->prepare("DELETE FROM product_variants WHERE variant_id = ?");
+        $stmt->bind_param("i", $variant_id);
+        $stmt->execute();
+        $stmt->close();
     }
+}
 
-    $variantQuery->close();
-    ?>
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['variant_id'])) {
+    remove_variant($_POST['variant_id'], $conn);
+}
+?>
+
+<!-- Variants List -->
+<div class="form-group">
+    <label for="product_variants_<?php echo $product['product_id']; ?>">Product Variants</label>
+    <ul class="list-group">
+<?php
+$variantQuery = $conn->prepare("SELECT * FROM product_variants WHERE product_id = ?");
+$variantQuery->bind_param("i", $product['product_id']);
+$variantQuery->execute();
+$variantResult = $variantQuery->get_result();
+
+while ($variant = $variantResult->fetch_assoc()) {
+    echo "<li class='list-group-item'>"
+        . htmlspecialchars($variant['variant_name']) . " - SKU: "
+        . htmlspecialchars($variant['sku']) . " - Price: ₱"
+        . number_format($variant['price'], 2) . " - Stock: "
+        . htmlspecialchars($variant['stock_quantity'])
+        . " <form method='post' action='' style='display:inline;'>"
+        . "<input type='hidden' name='variant_id' value='" . htmlspecialchars($variant['variant_id']) . "'>"
+        . "<button type='submit' class='btn btn-danger btn-sm'>X</button>"
+        . "</form></li>";
+}
+
+$variantQuery->close();
+?>
 </ul>
 
 
@@ -234,127 +255,152 @@ $storeResult = $storeQuery->get_result();
     </div>
 
 
-    <!-- Modal for Adding Product -->
-<!-- Modal for Adding Product -->
-<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeAddModal()">
-                    <span>&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="addProductForm" enctype="multipart/form-data" method="POST" action="../function/add_product.php">
-                    <div class="form-group">
-                        <label for="store_id">Select Store</label>
-                        <select class="form-control" name="store_id" required>
-                            <option value="">Choose a store...</option>
-                            <?php while ($store = $storeResult->fetch_assoc()): ?>
-                                <option value="<?php echo htmlspecialchars($store['store_id']); ?>"><?php echo htmlspecialchars($store['store_name']); ?></option>
-                            <?php endwhile; ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="add_product_name">Product Name</label>
-                        <input type="text" class="form-control" id="add_product_name" name="add_product_name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="add_product_description">Product Description</label>
-                        <textarea class="form-control" id="add_product_description" name="add_product_description" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="add_product_price">Price</label>
-                        <input type="number" class="form-control" id="add_product_price" name="add_product_price" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="add_product_image">Product Image</label>
-                        <input type="file" class="form-control" id="add_product_image" name="add_product_image" required>
-                    </div>
-                    <!-- New Category Field -->
-                    <div class="form-group">
-                        <label for="category">Category</label>
-                        <select class="form-control" name="category" required>
-                            <option value="">Choose a category...</option>
-                            <option value="Meals">Meals</option>
-                            <option value="Desserts">Desserts</option>
-                            <option value="Beverages">Beverages</option>
-                            <option value="Snacks">Snacks</option>
-                            <option value="Pasta">Pasta</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Add Product Button -->
-                    <div class="text-center mb-4">
-                        <button type="submit" class="btn btn-success">Add Product</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <!-- Modal for Editing Product -->
-<div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeEditModal()">
-                    <span>&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="editProductForm" enctype="multipart/form-data" method="POST" action="../function/edit_product.php">
-                    <input type="hidden" name="product_id" id="edit_product_id">
-
-                    <!-- Store Selection Dropdown -->
-                    <div class="form-group">
-                        <label for="edit_store_id">Select Store</label>
-                        <select class="form-control" name="store_id" id="edit_store_id" required>
-                            <option value="">Choose a store...</option>
-                            <?php 
-                            // Reset the store query result before reusing it in the edit modal
-                            $storeQuery->execute();
-                            $storeResult = $storeQuery->get_result();
-                            while ($store = $storeResult->fetch_assoc()): ?>
-                                <option value="<?php echo htmlspecialchars($store['store_id']); ?>"><?php echo htmlspecialchars($store['store_name']); ?></option>
-                            <?php endwhile; ?>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="edit_product_name">Product Name</label>
-                        <input type="text" class="form-control" id="edit_product_name" name="edit_product_name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="edit_product_description">Product Description</label>
-                        <textarea class="form-control" id="edit_product_description" name="edit_product_description" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="edit_product_price">Price</label>
-                        <input type="number" class="form-control" id="edit_product_price" name="edit_product_price" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="edit_stock_quantity">Stock Quantity</label>
-                        <input type="number" class="form-control" id="edit_stock_quantity" name="edit_stock_quantity" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="edit_product_image">Product Image</label>
-                        <input type="file" class="form-control" id="edit_product_image" name="edit_product_image">
-                    </div>
-                    
-                    <!-- Edit Product Button -->
-                    <div class="text-center mb-4">
-                        <button type="submit" class="btn btn-success">Update Product</button>
-                    </div>
-                </form>
+        <!-- Modal for Adding Product -->
+    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeAddModal()">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addProductForm" enctype="multipart/form-data" method="POST" action="../function/add_product.php">
+                        <div class="form-group">
+                            <label for="store_id">Select Store</label>
+                            <select class="form-control" name="store_id" required>
+                                <option value="">Choose a store...</option>
+                                <?php while ($store = $storeResult->fetch_assoc()): ?>
+                                    <option value="<?php echo htmlspecialchars($store['store_id']); ?>"><?php echo htmlspecialchars($store['store_name']); ?></option>
+                                <?php endwhile; ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="add_product_name">Product Name</label>
+                            <input type="text" class="form-control" id="add_product_name" name="add_product_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="add_product_description">Product Description</label>
+                            <textarea class="form-control" id="add_product_description" name="add_product_description" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="add_product_price">Price</label>
+                            <input type="number" class="form-control" id="add_product_price" name="add_product_price" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="add_product_image">Product Image</label>
+                            <input type="file" class="form-control" id="add_product_image" name="add_product_image" required>
+                        </div>
+                        <!-- New Category Field -->
+                        <?php 
+                        // Fetch categories from the database
+                        $sql = "SELECT category_id, category_name FROM categories";
+                        $result = $conn->query($sql);
+                        ?>
+                        <div class="form-group">
+                            <label for="category_id">Category</label>
+                            <select class="form-control" name="category_id" id="category_id" required>
+                                <option value="">Choose a category...</option>
+                                <?php
+                                if ($result->num_rows > 0) {
+                                    // Output data of each row
+                                    while($row = $result->fetch_assoc()) {
+                                        echo '<option value="' . $row["category_id"] . '">' . $row["category_name"] . '</option>';
+                                    }
+                                } else {
+                                    echo '<option value="">No categories available</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <!-- Add Product Button -->
+                        <div class="text-center mb-4">
+                            <button type="submit" class="btn btn-success">Add Product</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+                  
+
+       <!-- Modal for Editing Product -->
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeEditModal()">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProductForm" enctype="multipart/form-data" method="POST" action="../function/edit_product.php">
+                        <input type="hidden" name="product_id" id="edit_product_id">
+    
+                        <!-- Store Selection Dropdown -->
+                        <div class="form-group">
+                            <label for="edit_store_id">Select Store</label>
+                            <select class="form-control" name="store_id" id="edit_store_id" required>
+                                <option value="">Choose a store...</option>
+                                <?php 
+                                // Reset the store query result before reusing it in the edit modal
+                                $storeQuery->execute();
+                                $storeResult = $storeQuery->get_result();
+                                while ($store = $storeResult->fetch_assoc()): ?>
+                                    <option value="<?php echo htmlspecialchars($store['store_id']); ?>"><?php echo htmlspecialchars($store['store_name']); ?></option>
+                                <?php endwhile; ?>
+                            </select>
+                        </div>
+    
+                        <!-- Category Selection Dropdown -->
+                        <div class="form-group">
+                            <label for="edit_category_id">Select Category</label>
+                            <select class="form-control" name="category_id" id="edit_category_id" required>
+                                <option value="">Choose a category...</option>
+                                <?php 
+                                // Fetch categories from the database
+                                $categoryQuery = $conn->prepare("SELECT * FROM categories");
+                                $categoryQuery->execute();
+                                $categoryResult = $categoryQuery->get_result();
+                                while ($category = $categoryResult->fetch_assoc()): ?>
+                                    <option value="<?php echo htmlspecialchars($category['category_id']); ?>"><?php echo htmlspecialchars($category['category_name']); ?></option>
+                                <?php endwhile; ?>
+                                <?php $categoryQuery->close(); ?>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="edit_product_name">Product Name</label>
+                            <input type="text" class="form-control" id="edit_product_name" name="edit_product_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit_product_description">Product Description</label>
+                            <textarea class="form-control" id="edit_product_description" name="edit_product_description" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit_product_price">Price</label>
+                            <input type="number" class="form-control" id="edit_product_price" name="edit_product_price" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit_stock_quantity">Stock Quantity</label>
+                            <input type="number" class="form-control" id="edit_stock_quantity" name="edit_stock_quantity" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit_product_image">Product Image</label>
+                            <input type="file" class="form-control" id="edit_product_image" name="edit_product_image">
+                        </div>
+                        
+                        <!-- Edit Product Button -->
+                        <div class="text-center mb-4">
+                            <button type="submit" class="btn btn-success">Update Product</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </div>
@@ -384,11 +430,10 @@ $storeResult = $storeQuery->get_result();
     }
 
     function confirmDeleteProduct(productId) {
-        if (confirm("Are you sure you want to delete this product?")) {
-            window.location.href = '../function/delete_product.php?id=' + productId;
-        }
+    if (confirm("Are you sure you want to delete this product?")) {
+        window.location.href = '../function/delete_product.php?id=' + productId;
     }
-
+}
     function applyStockStatus(productId) {
         var stockStatus = document.getElementById('stock_status_' + productId).value;
 
@@ -418,7 +463,6 @@ $storeResult = $storeQuery->get_result();
 
 
 
-
     function openVariantModal(productId) {
     // Set product ID
     $('#variant_product_id').val(productId);
@@ -430,34 +474,32 @@ $storeResult = $storeQuery->get_result();
         data: { product_id: productId },
         success: function (response) {
             console.log('Raw response from get_variants.php:', response); // Debug log
-            if (typeof response === 'string') {
-                try {
-                    const res = JSON.parse(response);
-                    console.log('Parsed response:', res); // Debug log
+            
+            let res;
+            try {
+                res = typeof response === 'string' ? JSON.parse(response) : response;
+                console.log('Parsed response:', res); // Debug log
 
-                    if (res.status === 'success' && res.variants.length > 0) {
-                        // Populate dropdown with existing variants
-                        $('#variant_name').empty();
-                        res.variants.forEach(variant => {
-                            $('#variant_name').append(`<option value="${variant.variant_name}">${variant.variant_name}</option>`);
-                        });
+                if (res.status === 'success' && Array.isArray(res.variants) && res.variants.length > 0) {
+                    // Populate dropdown with existing variants
+                    $('#variant_name').empty();
+                    res.variants.forEach(variant => {
+                        $('#variant_name').append(`<option value="${variant.variant_name}">${variant.variant_name}</option>`);
+                    });
 
-                        $('#existingVariantSection').removeClass('d-none');
-                        $('#newVariantSection').addClass('d-none');
-                    } else {
-                        // Show add new variant field
-                        $('#existingVariantSection').addClass('d-none');
-                        $('#newVariantSection').removeClass('d-none');
-                    }
-
-                    $('#addVariantModal').modal('show');
-                } catch (error) {
-                    console.error('Error parsing response:', error);
-                    alert('Failed to load variant data. Please check the server output.');
+                    $('#existingVariantSection').removeClass('d-none');
+                    $('#newVariantSection').addClass('d-none');
+                } else {
+                    // Show "add new variant" field
+                    $('#existingVariantSection').addClass('d-none');
+                    $('#newVariantSection').removeClass('d-none');
                 }
-            } else {
-                console.warn('Received an unexpected response type:', typeof response);
-                alert('Unexpected response type. Please check the server response.');
+
+                // Show the modal
+                $('#addVariantModal').modal('show');
+            } catch (error) {
+                console.error('Error parsing response:', error);
+                alert('Failed to load variant data. Please check the server response.');
             }
         },
         error: function (xhr, status, error) {
@@ -509,35 +551,31 @@ $('#addVariantForm').on('submit', function (e) {
         data: formData,
         success: function (response) {
             console.log('Raw response from seller_variant.php:', response); // Debug log
-            if (typeof response === 'string') {
-                try {
-                    const res = JSON.parse(response);
-                    console.log('Parsed response:', res); // Debug log
+            let res;
+            try {
+                res = typeof response === 'string' ? JSON.parse(response) : response;
+                console.log('Parsed response:', res); // Debug log
 
-                    if (res.status === 'success') {
-                        alert(res.message);
+                if (res.status === 'success') {
+                    alert(res.message);
 
-                        // Add the new variant to the dropdown if it was a new variant submission
-                        if (!$('#newVariantSection').hasClass('d-none')) {
-                            const newVariantName = $('#new_variant_name').val().trim();
-                            $('#variant_name').append(`<option value="${encodeURIComponent(newVariantName)}">${newVariantName}</option>`);
-                            $('#variant_name').val(newVariantName); // Select the newly added variant
-                        }
-
-                        $('#addVariantModal').modal('hide');
-                        // Optionally, refresh the modal data without a full page reload
-                        openVariantModal($('#variant_product_id').val());
-                    } else {
-                        console.warn('Error from server:', res.message);
-                        alert(res.message);
+                    // Add the new variant to the dropdown if it was a new variant submission
+                    if (!$('#newVariantSection').hasClass('d-none')) {
+                        const newVariantName = $('#new_variant_name').val().trim();
+                        $('#variant_name').append(`<option value="${encodeURIComponent(newVariantName)}">${newVariantName}</option>`);
+                        $('#variant_name').val(newVariantName); // Select the newly added variant
                     }
-                } catch (error) {
-                    console.error('Error parsing response:', error);
-                    alert('Failed to process response. Please check the server output.');
+
+                    $('#addVariantModal').modal('hide');
+                    // Optionally, refresh the modal data without a full page reload
+                    openVariantModal($('#variant_product_id').val());
+                } else {
+                    console.warn('Error from server:', res.message);
+                    alert(res.message);
                 }
-            } else {
-                console.warn('Received an unexpected response type:', typeof response);
-                alert('Unexpected response type. Please check the server response.');
+            } catch (error) {
+                console.error('Error parsing response:', error);
+                alert('Failed to process response. Please check the server output.');
             }
         },
         error: function (xhr, status, error) {

@@ -8,8 +8,6 @@ if (!isset($_SESSION['user_id']) || ($_SESSION['isAdmin'] != 1 && $_SESSION['isA
     exit;
 }
 
-
-
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get product data from the form
@@ -19,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $product_description = $_POST['edit_product_description'];
     $product_price = $_POST['edit_product_price'];
     $product_stock_quantity = $_POST['edit_stock_quantity'];
+    $category_id = $_POST['category_id']; // Get the category_id from the form
 
     // Fetch the current product data to retain the existing image if no new image is uploaded
     $currentProductQuery = $conn->prepare("SELECT image FROM products WHERE product_id = ?");
@@ -39,11 +38,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Update the product in the database
-    $stmt = $conn->prepare("UPDATE products SET store_id = ?, name = ?, description = ?, price = ?, stock_quantity = ?, image = ? WHERE product_id = ?");
+    $stmt = $conn->prepare("UPDATE products SET store_id = ?, name = ?, description = ?, price = ?, stock_quantity = ?, image = ?, category_id = ? WHERE product_id = ?");
     if ($stmt === false) {
         die("Prepare failed: " . htmlspecialchars($conn->error));
     }
-    $stmt->bind_param("isssisi", $store_id, $product_name, $product_description, $product_price, $product_stock_quantity, $product_image, $product_id);
+    $stmt->bind_param("isssissi", $store_id, $product_name, $product_description, $product_price, $product_stock_quantity, $product_image, $category_id, $product_id);
     if (!$stmt->execute()) {
         die("Execute failed: " . htmlspecialchars($stmt->error));
     }

@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Adjust price if a variant is selected
         if ($variant_id > 0) {
-            $variant_query = "SELECT price, name, sku FROM product_variants WHERE variant_id = ?";
+            $variant_query = "SELECT price, variant_name, sku FROM product_variants WHERE variant_id = ?";
             $variant_stmt = $conn->prepare($variant_query);
             $variant_stmt->bind_param("i", $variant_id);
             $variant_stmt->execute();
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($variant_result->num_rows > 0) {
                 $variant = $variant_result->fetch_assoc();
                 $base_price += $variant['price'];
-                $variant_name = $variant['name'];
+                $variant_name = $variant['variant_name'];
                 $sku = $variant['sku'];
             } else {
                 // Handle invalid variant gracefully

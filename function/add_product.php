@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $description = $_POST['add_product_description'];
     $price = $_POST['add_product_price'];
     $image = $_FILES['add_product_image'];
-    $category = $_POST['category']; // Get the category from the form
+    $category_id = $_POST['category_id']; // Get the category_id from the form
 
     // Validate that the store ID exists
     $storeCheck = $conn->prepare("SELECT store_id FROM stores WHERE store_id = ?");
@@ -32,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $target_file = $target_dir . basename($image["name"]);
 
     if (move_uploaded_file($image["tmp_name"], $target_file)) {
-        // Insert the product into the database, including the category
-        $stmt = $conn->prepare("INSERT INTO products (name, description, price, image, user_id, store_id, category) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssdsiss", $name, $description, $price, $image["name"], $_SESSION['user_id'], $store_id, $category);
+        // Insert the product into the database, including the category_id
+        $stmt = $conn->prepare("INSERT INTO products (name, description, price, image, user_id, store_id, category_id) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssdsiss", $name, $description, $price, $image["name"], $_SESSION['user_id'], $store_id, $category_id);
         
         if ($stmt->execute()) {
             header('location: ../seller/seller_product.php');
